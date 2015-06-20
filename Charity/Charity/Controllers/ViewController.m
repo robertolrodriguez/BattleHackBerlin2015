@@ -13,6 +13,7 @@
 #import "ChairController.h"
 #import "TimerViewController.h"
 #import "ChairModel.h"
+#import "MicrophoneSensor.h"
 
 @interface ViewController () <BankDelegate , ChairControllerDelegate, ConnectionDelegate>
 @property (nonatomic, strong) Bank *bank;
@@ -28,13 +29,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeOfWorkLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
+@property (nonatomic,strong) MicrophoneSensor *microphoneSensor;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.microphoneSensor = [[MicrophoneSensor alloc] init];
     self.bank = [[Bank alloc] initWithViewController:self];
     self.bank.delegate = self;
 
