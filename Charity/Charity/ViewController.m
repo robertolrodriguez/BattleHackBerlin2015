@@ -7,21 +7,23 @@
 //
 
 #import "ViewController.h"
+#import "Bank.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong)Bank *bank;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.bank = [[Bank alloc] initWithViewController:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [self.bank authorize];
 }
 
 @end
