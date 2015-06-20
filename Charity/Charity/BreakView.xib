@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -15,7 +15,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="DRQ-ob-iHB"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="43"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -25,7 +25,7 @@
                         <constraint firstAttribute="width" constant="200" id="1ZG-t6-Ibu"/>
                         <constraint firstAttribute="height" constant="200" id="Cyn-aj-ghH"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="49"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>

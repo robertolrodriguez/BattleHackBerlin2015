@@ -14,23 +14,28 @@
 #import "TimerViewController.h"
 #import "ChairModel.h"
 #import "BreakView.h"
+
+@interface ViewController () <BankDelegate,
+                              ChairControllerDelegate,
 #import "MicrophoneSensor.h"
 
 @interface ViewController () <BankDelegate, ChairControllerDelegate,
                               ConnectionDelegate, MicroPhoneSensorDelegate>
-@property(nonatomic, strong) Bank *bank;
-@property(nonatomic, weak)
-    IBOutlet KAProgressLabel *progressLabelBadPositionTime;
-@property(nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
-@property(nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
+@property (nonatomic, strong) Bank *bank;
+@property (nonatomic, strong) TimerViewController *timerViewController;
+@property (nonatomic, strong) ChairModel *chairModel;
+@property (nonatomic, strong) ChairController *chairController;
 
-@property(strong, nonatomic) IBOutlet TimerViewController *timerViewController;
-@property(nonatomic, strong) ChairModel *chairModel;
+@property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
+@property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
+@property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
+@property (nonatomic, weak) IBOutlet UILabel *balanceLabel;
+@property (nonatomic, weak) IBOutlet UILabel *timeOfWorkLabel;
+@property (nonatomic, weak) IBOutlet UILabel *statusLabel;
 
-@property(nonatomic, strong) ChairController *chairController;
-@property(weak, nonatomic) IBOutlet UILabel *balanceLabel;
-@property(weak, nonatomic) IBOutlet UILabel *timeOfWorkLabel;
-@property(weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (nonatomic, weak) IBOutlet UILabel *noiseLevelLabel;
+@property (nonatomic, weak) IBOutlet UILabel *lightLevelLabel;
+@property (nonatomic, weak) IBOutlet UILabel *temperatureLabel;
 @property(nonatomic, strong) MicrophoneSensor *microphone;
 
 @end
@@ -51,8 +56,8 @@
                   slouchLabel:self.progressLabelBadPositionTime
                silhuetteImage:self.silhuetteImageView
           workTimerController:self.timerViewController
-      acceptableSedentaryTime:5
-         acceptableSlouchTime:30.0];
+      acceptableSedentaryTime:30.0
+         acceptableSlouchTime:20.0];
   self.chairController.delegate = self;
 
   [self updateBalance:self.bank.balance];
@@ -72,7 +77,7 @@
 
 - (void)updateBalance:(CGFloat)balance {
   self.balanceLabel.text =
-      [NSString stringWithFormat:@"Donated: %.2f$", balance];
+      [NSString stringWithFormat:@"Donated: %.2f €", balance];
 }
 
 - (void)slouchingTimeExceeded {
