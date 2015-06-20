@@ -19,7 +19,7 @@
 
 @end
 
-const NSUInteger JSTValuesRange  = 5; // 0,1s/value
+const NSUInteger JSTValuesRange  = 3; // 0,1s/value
 const NSUInteger JSTValuesRangeDifferentialThreshold  = 1;
 
 @implementation ChairSensor
@@ -70,23 +70,25 @@ const NSUInteger JSTValuesRangeDifferentialThreshold  = 1;
 - (void)estimateValues {
     if (self.values.count == JSTValuesRange) {
         NSNumber *average = [self.values valueForKeyPath:@"@avg.self"];
+        
+        NSLog(@"who: %@,last_avg: %@, avg: %@", self, self.lastAverage, average);
         [self.values removeAllObjects];
         if (self.lastAverage) {
-            if ( fabsf (self.lastAverage.floatValue  - average.floatValue ) > 5.f ) {
-                if (self.lastAverage.floatValue < average.floatValue) {
-                    NSLog(@"IR DOWN");
+            if ( fabsf (average.floatValue ) > 24.f ) {
+              
                     if (!self.isTouching) {
                         self.isTouching = YES;
                         [self.chairSensorDelegate isTouching:self.isTouching sensor:self];
                     }
-                } else {
-                    if (self.isTouching) {
-                        self.isTouching = NO;
-                        [self.chairSensorDelegate isTouching:self.isTouching sensor:self];
-                    }
-
-                    NSLog(@"IR UP");
+                
+            } else {
+                
+                if (self.isTouching) {
+                    self.isTouching = NO;
+                    [self.chairSensorDelegate isTouching:self.isTouching sensor:self];
                 }
+                
+                NSLog(@"IR UP");
             }
         }
         self.lastAverage = average;

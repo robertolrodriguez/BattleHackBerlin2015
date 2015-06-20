@@ -78,7 +78,7 @@ NSString *const JSTSensorTagConnectionFailureNotificationErrorKey = @"JSTSensorT
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
-    NSLog(@"%s peripheral:%@, service:%@, characteristics: %@", __PRETTY_FUNCTION__, peripheral.identifier, service, service.characteristics);
+    //NSLog(@"%s peripheral:%@, service:%@, characteristics: %@", __PRETTY_FUNCTION__, peripheral.identifier, service, service.characteristics);
 
     if (error) {
         NSLog(@"%s %@", __PRETTY_FUNCTION__, error);
@@ -104,7 +104,7 @@ NSString *const JSTSensorTagConnectionFailureNotificationErrorKey = @"JSTSensorT
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
-    NSLog(@"%s %@ %@", __PRETTY_FUNCTION__, peripheral.identifier, characteristic);
+    //NSLog(@"%s %@ %@", __PRETTY_FUNCTION__, peripheral.identifier, characteristic);
     NSMutableString* tmpString = [NSMutableString string];
     for (size_t i = characteristic.value.length - 1; i > 0; i -= 1)
     {
