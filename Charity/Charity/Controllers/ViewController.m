@@ -26,6 +26,7 @@
 @property (nonatomic, strong) ChairController *chairController;
 @property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeOfWorkLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end
 

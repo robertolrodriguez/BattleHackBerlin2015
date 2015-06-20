@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4OL-2c-gnC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4OL-2c-gnC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -83,7 +83,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-f8-nos">
-                                <rect key="frame" x="0.0" y="334" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="334" width="600" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vof-y3-Zea">
                                         <rect key="frame" x="0.0" y="15" width="600" height="20.5"/>
@@ -103,15 +103,31 @@
                                     <constraint firstItem="vof-y3-Zea" firstAttribute="leading" secondItem="CwT-f8-nos" secondAttribute="leading" id="4DL-eH-8ab"/>
                                     <constraint firstAttribute="trailing" secondItem="OR5-8z-Mww" secondAttribute="trailing" id="6Ss-K9-fVT"/>
                                     <constraint firstItem="vof-y3-Zea" firstAttribute="top" secondItem="CwT-f8-nos" secondAttribute="top" constant="15" id="NmW-b7-vb6"/>
-                                    <constraint firstAttribute="height" constant="150" id="RyD-at-pEh"/>
+                                    <constraint firstAttribute="height" constant="100" id="RyD-at-pEh"/>
                                     <constraint firstItem="OR5-8z-Mww" firstAttribute="leading" secondItem="CwT-f8-nos" secondAttribute="leading" id="bkA-bG-L88"/>
                                     <constraint firstAttribute="trailing" secondItem="vof-y3-Zea" secondAttribute="trailing" id="lfB-ba-yni"/>
                                     <constraint firstItem="OR5-8z-Mww" firstAttribute="top" secondItem="vof-y3-Zea" secondAttribute="bottom" constant="15" id="qiF-6k-8MR"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWe-XK-gaw">
+                                <rect key="frame" x="16" y="434" width="568" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connecting to the chair..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwf-ju-lkh">
+                                        <rect key="frame" x="19" y="14" width="275" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="05U-1W-Cpf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jWe-XK-gaw" secondAttribute="trailing" id="7ZR-ed-q8e"/>
                             <constraint firstItem="cjS-du-wmA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AlM-Yx-smc"/>
                             <constraint firstAttribute="centerX" secondItem="v17-ia-dZo" secondAttribute="centerX" id="GKz-zx-uTq"/>
                             <constraint firstAttribute="trailing" secondItem="CwT-f8-nos" secondAttribute="trailing" id="GSn-Ow-i2Z"/>
@@ -129,7 +145,9 @@
                             <constraint firstItem="1LB-r2-Lve" firstAttribute="leading" secondItem="v17-ia-dZo" secondAttribute="trailing" constant="16" id="eNn-9T-3lK"/>
                             <constraint firstItem="6aI-o3-9L8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pBd-wT-Ra9"/>
                             <constraint firstItem="v17-ia-dZo" firstAttribute="leading" secondItem="xPm-Y4-FX7" secondAttribute="trailing" constant="8" id="pK6-tZ-VYF"/>
+                            <constraint firstItem="jWe-XK-gaw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qbe-lf-Asz"/>
                             <constraint firstItem="6aI-o3-9L8" firstAttribute="baseline" secondItem="1LB-r2-Lve" secondAttribute="baseline" id="rUN-OR-age"/>
+                            <constraint firstItem="jWe-XK-gaw" firstAttribute="top" secondItem="CwT-f8-nos" secondAttribute="bottom" id="wyD-8O-68c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="pgw-J2-3tX">
@@ -149,6 +167,7 @@
                         <outlet property="progressLabelBadPositionTime" destination="HGm-4S-fVG" id="JOP-EL-YRq"/>
                         <outlet property="progressLabelSedentaryTime" destination="1LB-r2-Lve" id="BXx-fq-q6B"/>
                         <outlet property="silhuetteImageView" destination="v17-ia-dZo" id="G5g-jQ-Axy"/>
+                        <outlet property="statusLabel" destination="nwf-ju-lkh" id="Db2-zb-93h"/>
                         <outlet property="timeOfWorkLabel" destination="OR5-8z-Mww" id="DqZ-4Z-RNB"/>
                     </connections>
                 </viewController>
