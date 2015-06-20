@@ -62,13 +62,12 @@
 
     if (sat) {
          [self.timerViewController start];
-
-        if (self.slouched) {
-            [self sedentaryTimerStart:sat];
-        }
-
     } else {
         [self.timerViewController stop];
+    }
+
+    if (self.slouched) {
+        [self slouchTimerStart:sat & self.slouched];
     }
 
     self.silhuetteImageView.image = self.slouched && sat ? [UIImage imageNamed:@"silhuette-red"] : [UIImage imageNamed:@"silhuette"] ;
@@ -90,7 +89,9 @@
 
     self.silhuetteImageView.image = _slouched && self.sat ? [UIImage imageNamed:@"silhuette-red"] : [UIImage imageNamed:@"silhuette"] ;
 
-    [self slouchTimerStart:slouched];
+    if (self.sat) {
+        [self slouchTimerStart:slouched];
+    }
 }
 
 
