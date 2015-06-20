@@ -52,7 +52,6 @@ NSString *deviceBackID= @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
 }
 
 - (void)manager:(JSTSensorManager *)manager didConnectSensor:(JSTSensorTag *)sensor {
-    BOOL allSensorsConnected = YES;
     if (!self.upperSensor && [[sensor.peripheral.identifier UUIDString] isEqualToString:deviceBackID]) {
         self.upperSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor irSensor:sensor.irSensor];
         self.upperSensor.chairSensorDelegate = self;
@@ -104,7 +103,18 @@ NSString *deviceBackID= @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
         //[manager startScanning:nil];
         [manager connectSensorWithUUID:[[NSUUID alloc] initWithUUIDString:deviceAssID]];
     }
+}
 
+- (void)newAmbientTemperature:(CGFloat)ambientTemp {
+    TemperatureState state = TemperatureStateLow;
+    
+    if (ambientTemp > 20.f) {
+        state = TemperatureStateMedium;
+    } else if (ambientTemp > 25.f) {
+        state = TemperatureStateHigh;
+    }
+    
+    [self.connectionDelegate newAmbientTemperature:state];
 }
 
 @end

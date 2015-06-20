@@ -63,6 +63,7 @@ const NSUInteger JSTValuesRangeDifferentialThreshold  = 1;
     } else if ([sensor isKindOfClass:[JSTIRSensor class]]) {
         JSTIRSensor *irSensor = (JSTIRSensor *) sensor;
         [self.values addObject:@(irSensor.objectTemperature)];
+        [self.chairSensorDelegate newAmbientTemperature:irSensor.ambientTemperature];
         [self estimateValues];
     }
 }

@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 @class ChairSensor, JSTKeysSensor, JSTIRSensor;
 @protocol ChairSensor <NSObject>
 
 -(void)isTouching:(BOOL)isTouching sensor:(ChairSensor *)sensor;
+-(void)newAmbientTemperature:(CGFloat)ambientTemp;
 
 @end
 
