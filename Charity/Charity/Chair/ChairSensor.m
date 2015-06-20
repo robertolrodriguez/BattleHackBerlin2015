@@ -21,6 +21,7 @@
     
     if (self) {
         self.sensorKeys = keysSensor;
+        self.sensorKeys.sensorDelegate = self;
     }
     return self;
 }
