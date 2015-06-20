@@ -8,6 +8,7 @@
 
 #import <KAProgressLabel/KAProgressLabel.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 #import "TimerViewController.h"
 #import "ChairController.h"
 
@@ -25,6 +26,8 @@
 
 @property (nonatomic, strong) NSTimer *sedentaryTimer;
 @property (nonatomic, strong) NSTimer *slouchingTimer;
+
+@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end
 
@@ -80,6 +83,28 @@
     [self sedentaryTimerStart:sat];
 }
 
+-(void) playSound {
+
+    NSString *path;
+
+    NSURL *url;
+
+
+    path = [[NSBundle mainBundle] pathForResource:@"0899" ofType:@"mp3"];
+
+    url = [NSURL fileURLWithPath:path];
+
+    if (self.player == nil) {
+        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+    }
+
+    [self.player setVolume:1.0];
+    [self.player play];
+
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
 - (void)setSlouched:(BOOL)slouched {
 
     if (_slouched == slouched) {
@@ -128,8 +153,8 @@
                                                              selector:@selector(slouchTick:)
                                                              userInfo:nil
                                                               repeats:YES];
-        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
+        [self playSound];
 
         return;
     }
@@ -155,6 +180,7 @@
         [self sedentaryTimerStart:NO];
         _sedentaryTime = 0.0;
         [self.delegate sedentaryTimeExceeded];
+        [self playSound];
     }
 }
 
