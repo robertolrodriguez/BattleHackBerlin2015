@@ -74,7 +74,15 @@
 
 - (void)updateBalance:(CGFloat)balance {
   self.balanceLabel.text =
+
       [NSString stringWithFormat:@"Donated: %.2f €", balance];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    [animation setFromValue:@(1.6f)];
+    [animation setToValue:@(1.0f)];
+    [animation setDuration:0.3];
+    [animation setRemovedOnCompletion:YES];
+    [self.balanceLabel.layer addAnimation:animation forKey:@"bounce"];
+    self.balanceLabel.layer.transform = CATransform3DIdentity;
 }
 
 - (void)slouchingTimeExceeded {

@@ -37,7 +37,7 @@
 
 - (void)start {
     self.progressLabel.progressColor = [UIColor colorWithRed:0.360784f green:0.905882f blue:0.956863f alpha:1.0f];
-    self.progressLabel.trackColor = [UIColor colorWithRed:0.226120f green:0.586848f blue:0.624792f alpha:1.0f];
+    self.progressLabel.trackColor = [UIColor colorWithRed:0.226120f green:0.586848f blue:0.624792f alpha:0.4f];
     self.progressLabel.trackWidth = self.progressLabel.progressWidth = self.progressLabel.roundedCornersWidth = 20.0;
 
     [self slouchTimerStart:YES];
@@ -89,7 +89,7 @@
 
     [label setProgress:percentage
                 timing:TPPropertyAnimationTimingEaseOut
-              duration:1.0
+              duration:1
                  delay:0.0];
 }
 
