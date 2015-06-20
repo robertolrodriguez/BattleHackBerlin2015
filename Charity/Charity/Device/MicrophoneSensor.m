@@ -61,7 +61,7 @@
     const double ALPHA = 0.05;
     double peakPowerForChannel = pow(10, (0.05 * [self.recorder peakPowerForChannel:0]));
     self.lowPassResults = ALPHA * peakPowerForChannel + (1.0 - ALPHA) * self.lowPassResults;
-    if (self.lowPassResults > 0.95) {
+    if (self.lowPassResults > 0.7) {
         if(!self.loud) {
             self.loud = YES;
             [self.delegate setLoudSoundState];
