@@ -32,6 +32,7 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
         NSLog(@"Up position");
 
     } else {
+        NSLog(@"Wrong position");
         //wrong position
     }
 }
@@ -49,8 +50,10 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
     BOOL allSensorsConnected = YES;
     if ([[sensor.peripheral.identifier UUIDString] isEqualToString:deviceBackID]) {
         self.upperSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor];
+        self.upperSensor.chairSensorDelegate = self;
     } else  if ([[sensor.peripheral.identifier UUIDString] isEqualToString:deviceAssID]) {
         self.lowerSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor];
+        self.lowerSensor.chairSensorDelegate = self;
     }
     for (JSTSensorTag *sensorTag in self.sensors) {
         allSensorsConnected &= (sensorTag.peripheral.state == CBPeripheralStateConnected);
