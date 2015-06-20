@@ -37,22 +37,32 @@
     self.bank = [[Bank alloc] initWithViewController:self];
     self.bank.delegate = self;
 
+    self.timerViewController = [[TimerViewController alloc] initWithLabel:self.timeOfWorkLabel];
     self.chairController = [[ChairController alloc] initWithSedentaryLabel:self.progressLabelSedentaryTime
                                                                slouchLabel:self.progressLabelBadPositionTime
                                                             silhuetteImage:self.silhuetteImageView
-                                                   acceptableSedentaryTime:60.0 * 1.0
-                                                      acceptableSlouchTime:10.0];
+                                                       workTimerController:self.timerViewController
+                                                   acceptableSedentaryTime:10.0 * 1.0
+                                                      acceptableSlouchTime:5.0];
+    self.chairController.delegate = self;
 
 
     [self updateBalance:self.bank.balance];
 
     self.chairModel = [ChairModel new];
     self.chairModel.delegate = self.chairController;
-    self.timerViewController = [[TimerViewController alloc] initWithLabel:self.timeOfWorkLabel];
+}
+
+- (IBAction)sit:(id)sender {
+    self.chairController.sat = !self.chairController.sat;
+}
+
+- (IBAction)slouch:(id)sender {
+    self.chairController.slouched = !self.chairController.slouched;
 }
 
 - (void)updateBalance:(CGFloat)balance {
-    self.balanceLabel.text = [NSString stringWithFormat:@"Current balance: %.2f$", balance];
+    self.balanceLabel.text = [NSString stringWithFormat:@"Donated: %.2f$", balance];
 }
 
 - (void)slouchingTimeExceeded {
@@ -64,38 +74,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-
     [self.bank authorize];
-
-    self.chairController.sat = YES;
-    self.chairController.slouched = YES;
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.bank charge];
-        self.chairController.sat = NO;
-    });
-
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerViewController start];
-        });
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(13 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerViewController stop];
-        });
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(18 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerViewController start];
-        });
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerViewController stop];
-        });
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(26 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerViewController start];
-        });
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(36 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerViewController stop];
-        });
-    });
 }
 
 - (void)balanceDidChange {
