@@ -43,12 +43,18 @@
                                            delay:5.0];
 
     [self setUpCirculars];
+    [self.balanceView updateBalance:self.bank.balance];
 
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     [self.bank authorize];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+        [self.bank charge];
+    });
 }
 
 - (void)balanceDidChange {
@@ -65,6 +71,7 @@
 
     [self setUpCirculars];
 
+    [self.balanceView updateBalance:self.bank.balance];
 }
 - (void)paypalDidAuthorize {
 

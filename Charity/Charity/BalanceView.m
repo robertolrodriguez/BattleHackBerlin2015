@@ -31,7 +31,7 @@
 }
 
 - (void)updateBalance:(CGFloat)balance {
-    [label setText:[NSString stringWithFormat:@"Current balance: %f $", balance]];
+    [label setText:[NSString stringWithFormat:@"Current balance: %.2f $", balance]];
     [label sizeToFit];
 }
 

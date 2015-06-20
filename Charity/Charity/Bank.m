@@ -117,8 +117,5 @@ payPalFuturePaymentViewController:
   [self.delegate balanceDidChange];
 }
 
-- (CGFloat)balance {
-  return 0;
-}
 
 @end
