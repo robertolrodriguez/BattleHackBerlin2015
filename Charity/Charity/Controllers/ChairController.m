@@ -98,7 +98,10 @@
         return;
     }
 
-    [self.slouchingTimer invalidate];}
+    [self.slouchingTimer invalidate];
+
+    self.slouchTime = 0.0;
+}
 
 - (void)slouchTick:(id)info {
     self.slouchTime += 1.0;
