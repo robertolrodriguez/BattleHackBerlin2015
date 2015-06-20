@@ -12,6 +12,7 @@
 
 #import "ChairController.h"
 #import "TimerView.h"
+#import "ChairModel.h"
 
 @interface ViewController () <BankDelegate>
 @property (nonatomic, strong) Bank *bank;
@@ -20,6 +21,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
 
 @property (weak, nonatomic) IBOutlet TimerView*timerView;
+@property (nonatomic, strong) ChairModel *chairModel;
 
 @property (nonatomic, strong) ChairController *chairController;
 @property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
@@ -40,8 +42,11 @@
                                                    acceptableSedentaryTime:20.0f
                                                       acceptableSlouchTime:5.0f];
 
+
     [self updateBalance:self.bank.balance];
-    
+
+    self.chairModel = [ChairModel new];
+    self.chairModel.delegate = self.chairController;
 }
 
 - (void)updateBalance:(CGFloat)balance {

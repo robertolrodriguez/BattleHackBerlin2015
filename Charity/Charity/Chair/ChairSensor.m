@@ -22,6 +22,8 @@
     if (self) {
         self.sensorKeys = keysSensor;
         self.sensorKeys.sensorDelegate = self;
+        [self.sensorKeys setNotificationsEnabled:YES];
+
     }
     return self;
 }

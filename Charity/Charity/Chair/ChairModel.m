@@ -27,12 +27,16 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
     if (self.lowerSensor.isTouching && self.upperSensor.isTouching) {
         //Good position
         NSLog(@"Good position");
+        [self.delegate setSat:YES];
+        [self.delegate setSlouched:NO];
     } else if (!self.lowerSensor.isTouching) {
         //Up position
-        NSLog(@"Up position");
-
+        [self.delegate setSat:NO];
+        [self.delegate setSlouched:NO];
     } else {
-        //wrong position
+        NSLog(@"Wrong position");
+        [self.delegate setSat:YES];
+        [self.delegate setSlouched:YES];
     }
 }
 
@@ -49,8 +53,10 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
     BOOL allSensorsConnected = YES;
     if ([[sensor.peripheral.identifier UUIDString] isEqualToString:deviceBackID]) {
         self.upperSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor];
+        self.upperSensor.chairSensorDelegate = self;
     } else  if ([[sensor.peripheral.identifier UUIDString] isEqualToString:deviceAssID]) {
         self.lowerSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor];
+        self.lowerSensor.chairSensorDelegate = self;
     }
     for (JSTSensorTag *sensorTag in self.sensors) {
         allSensorsConnected &= (sensorTag.peripheral.state == CBPeripheralStateConnected);
@@ -93,7 +99,8 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
 
 - (void)manager:(JSTSensorManager *)manager didChangeStateTo:(CBCentralManagerState)state {
     if (manager.state == CBCentralManagerStatePoweredOn) {
-        [manager startScanning];
+        //[manager startScanning:@[[CBUUID UUIDWithString:deviceAssID],[CBUUID UUIDWithString: deviceBackID]]];
+        [manager startScanning:nil];
     }
 
 }
