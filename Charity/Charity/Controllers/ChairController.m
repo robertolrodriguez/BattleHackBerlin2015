@@ -68,6 +68,7 @@
          [self.timerViewController start];
     } else {
         [self.timerViewController stop];
+        [self.player stop];
     }
 
     if (self.slouched) {
@@ -85,6 +86,10 @@
 
 -(void) playSound {
 
+    UInt32 doChangeDefaultRoute = 1;
+    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
+
+
     NSString *path;
 
     NSURL *url;
@@ -94,9 +99,59 @@
 
     url = [NSURL fileURLWithPath:path];
 
-    if (self.player == nil) {
-        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
-    }
+
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+
+
+    [self.player setVolume:1.0];
+    [self.player play];
+
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+-(void) playSoundCoin {
+
+    UInt32 doChangeDefaultRoute = 1;
+    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
+
+    NSString *path;
+
+    NSURL *url;
+
+
+    path = [[NSBundle mainBundle] pathForResource:@"0339" ofType:@"mp3"];
+
+    url = [NSURL fileURLWithPath:path];
+
+
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+
+
+    [self.player setVolume:1.0];
+    [self.player play];
+
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+-(void) playSoundCar {
+
+    UInt32 doChangeDefaultRoute = 1;
+    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
+
+    NSString *path;
+
+    NSURL *url;
+
+
+    path = [[NSBundle mainBundle] pathForResource:@"0850" ofType:@"mp3"];
+
+    url = [NSURL fileURLWithPath:path];
+
+
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+
 
     [self.player setVolume:1.0];
     [self.player play];
@@ -113,7 +168,12 @@
 
     _slouched = slouched;
 
+    if (!slouched) {
+        [self.player stop];
+    }
+
     self.silhuetteImageView.image = [self imageForSat:self.sat slouched:slouched];
+
     if (self.sat) {
         [self slouchTimerStart:slouched];
     }
@@ -154,7 +214,7 @@
                                                              userInfo:nil
                                                               repeats:YES];
 
-        [self playSound];
+        [self playSoundCar];
 
         return;
     }
@@ -198,6 +258,7 @@
         [self slouchTimerStart:NO];
         _slouchTime = 0.0;
         [self.delegate slouchingTimeExceeded];
+        [self playSoundCoin];
     }
 }
 

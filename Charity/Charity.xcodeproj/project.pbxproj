@@ -35,6 +35,8 @@
 		CF6399281B360A210067A460 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6399271B360A210067A460 /* AudioToolbox.framework */; };
 		CF63992E1B362C590067A460 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF63992D1B362C590067A460 /* AVFoundation.framework */; };
 		CF6399301B362E510067A460 /* 0899.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF63992F1B362E510067A460 /* 0899.mp3 */; };
+		CF6399321B36317B0067A460 /* 0339.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF6399311B36317B0067A460 /* 0339.mp3 */; };
+		CF6399341B3633DD0067A460 /* 0850.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF6399331B3633DD0067A460 /* 0850.mp3 */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
 		F5FD2E3D1B35B21D00E71C40 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E3C1B35B21D00E71C40 /* TimerViewController.m */; };
 		F5FD2E421B35F3A000E71C40 /* BreakView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E411B35F3A000E71C40 /* BreakView.m */; };
@@ -105,6 +107,8 @@
 		CF6399271B360A210067A460 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CF63992D1B362C590067A460 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CF63992F1B362E510067A460 /* 0899.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0899.mp3; sourceTree = "<group>"; };
+		CF6399311B36317B0067A460 /* 0339.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0339.mp3; sourceTree = "<group>"; };
+		CF6399331B3633DD0067A460 /* 0850.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0850.mp3; sourceTree = "<group>"; };
 		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 		1725AFCC1B3591940093E139 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF6399331B3633DD0067A460 /* 0850.mp3 */,
+				CF6399311B36317B0067A460 /* 0339.mp3 */,
 				CF63992F1B362E510067A460 /* 0899.mp3 */,
 				1725AFCD1B3591940093E139 /* Info.plist */,
 				1725AFCE1B3591940093E139 /* main.m */,
@@ -396,9 +402,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6399341B3633DD0067A460 /* 0850.mp3 in Resources */,
 				CF6399301B362E510067A460 /* 0899.mp3 in Resources */,
 				1725AFD81B3591940093E139 /* Main.storyboard in Resources */,
 				1725AFDD1B3591940093E139 /* LaunchScreen.xib in Resources */,
+				CF6399321B36317B0067A460 /* 0339.mp3 in Resources */,
 				F5FD2E441B35F4D700E71C40 /* BreakView.xib in Resources */,
 				1725AFDA1B3591940093E139 /* Images.xcassets in Resources */,
 			);
