@@ -14,9 +14,10 @@
 #import "TimerViewController.h"
 #import "ChairModel.h"
 #import "BreakView.h"
+#import "MicrophoneSensor.h"
 
 @interface ViewController () <BankDelegate, ChairControllerDelegate,
-                              ConnectionDelegate>
+                              ConnectionDelegate, MicroPhoneSensorDelegate>
 @property(nonatomic, strong) Bank *bank;
 @property(nonatomic, weak)
     IBOutlet KAProgressLabel *progressLabelBadPositionTime;
@@ -30,6 +31,7 @@
 @property(weak, nonatomic) IBOutlet UILabel *balanceLabel;
 @property(weak, nonatomic) IBOutlet UILabel *timeOfWorkLabel;
 @property(weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property(nonatomic, strong) MicrophoneSensor *microphone;
 
 @end
 
@@ -40,7 +42,8 @@
 
   self.bank = [[Bank alloc] initWithViewController:self];
   self.bank.delegate = self;
-
+    self.microphone = [[MicrophoneSensor alloc] init];
+    self.microphone.delegate = self;
   self.timerViewController =
       [[TimerViewController alloc] initWithLabel:self.timeOfWorkLabel];
   self.chairController = [[ChairController alloc]
@@ -130,6 +133,14 @@
       break;
     }
   });
+}
+
+-(void)setLoudSoundState {
+
+}
+
+-(void)setNormalSoundState {
+
 }
 
 @end
