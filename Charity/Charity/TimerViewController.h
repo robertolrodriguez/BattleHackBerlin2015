@@ -1,5 +1,5 @@
 //
-//  BalanceView.h
+//  TimerView.h
 //  Charity
 //
 //  Created by Michal Banasiak on 20.06.2015.
@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BalanceView : UIView
+@interface TimerViewController : NSObject
 
-- (void)updateBalance:(CGFloat)balance;
+- (id)initWithLabel:(UILabel*)label;
+
+- (void)start;
+- (void)stop;
 
 @end
