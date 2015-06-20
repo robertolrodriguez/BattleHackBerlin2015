@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Bank.h"
 
-@interface ViewController ()
+@interface ViewController () <BankDelegate>
 @property (nonatomic, strong)Bank *bank;
 @end
 
@@ -19,11 +19,20 @@
     [super viewDidLoad];
 
     self.bank = [[Bank alloc] initWithViewController:self];
+    self.bank.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     [self.bank authorize];
+}
+
+- (void)balanceDidChange {
+
+}
+
+- (void)paypalDidAuthorize {
+
 }
 
 @end

@@ -74,6 +74,7 @@
 
 - (void)payPalFuturePaymentViewController:(PayPalFuturePaymentViewController *)futurePaymentViewController didAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization {
     [futurePaymentViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate paypalDidAuthorize];
 }
 
 - (void)payPalFuturePaymentDidCancel:(PayPalFuturePaymentViewController *)futurePaymentViewController {
@@ -99,6 +100,8 @@
 }
 
 - (void)charge {
+    self.balance += 0.4;
+    [self.delegate balanceDidChange];
 }
 
 - (CGFloat)balance {
