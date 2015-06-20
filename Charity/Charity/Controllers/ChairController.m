@@ -7,13 +7,14 @@
 //
 
 #import <KAProgressLabel/KAProgressLabel.h>
-
+#import "TimerViewController.h"
 #import "ChairController.h"
 
 @interface ChairController ()
 @property (nonatomic, weak) KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, weak) KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) UIImageView *silhuetteImageView;
+@property (nonatomic, weak) TimerViewController *timerViewController;
 
 @property (nonatomic, assign) NSTimeInterval slouchTime;
 @property (nonatomic, assign) NSTimeInterval sedentaryTime;
@@ -31,6 +32,7 @@
 - (instancetype)initWithSedentaryLabel:(KAProgressLabel *)sedentary
                            slouchLabel:(KAProgressLabel *)slouch
                         silhuetteImage:(UIImageView *)silhuette
+                   workTimerController:(TimerViewController *)workController
                acceptableSedentaryTime:(NSTimeInterval)sedentaryTime
                   acceptableSlouchTime:(NSTimeInterval)slouchTime {
 
@@ -42,6 +44,7 @@
         _silhuetteImageView = silhuette;
         _acceptableSedentaryTime = sedentaryTime;
         _acceptableSlouchTime = slouchTime;
+        _timerViewController = workController;
 
         [self setUpViews];
     }
@@ -56,6 +59,12 @@
     }
 
     _sat = sat;
+
+    if (sat) {
+         [self.timerViewController start];
+    } else {
+        [self.timerViewController stop];
+    }
 
     [UIView animateWithDuration:0.3 animations:^{
         self.silhuetteImageView.alpha = sat ? 0.8f : 0.4f;
@@ -79,12 +88,16 @@
 - (void)sedentaryTimerStart:(BOOL)start {
 
     if (start) {
-        self.sedentaryTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(sedentaryTick:) userInfo:nil repeats:YES];
-
+        self.sedentaryTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                               target:self
+                                                             selector:@selector(sedentaryTick:)
+                                                             userInfo:nil
+                                                              repeats:YES];
         return;
     }
 
-    [self.sedentaryTimer invalidate];}
+    [self.sedentaryTimer invalidate];
+}
 
 - (void)sedentaryTick:(id)info {
     self.sedentaryTime += 1.0;
@@ -93,7 +106,11 @@
 - (void)slouchTimerStart:(BOOL)start {
 
     if (start) {
-        self.slouchingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(slouchTick:) userInfo:nil repeats:YES];
+        self.slouchingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                               target:self
+                                                             selector:@selector(slouchTick:)
+                                                             userInfo:nil
+                                                              repeats:YES];
 
         return;
     }

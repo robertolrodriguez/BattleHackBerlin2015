@@ -11,6 +11,7 @@
 #import "ChairControllerDelegate.h"
 
 @class KAProgressLabel;
+@class TimerViewController;
 
 @interface ChairController : NSObject <ChairProtocol>
 
@@ -22,6 +23,7 @@
 - (instancetype)initWithSedentaryLabel:(KAProgressLabel *)sedentary
                            slouchLabel:(KAProgressLabel *)slouch
                         silhuetteImage:(UIImageView *)silhuette
+                   workTimerController:(TimerViewController *)workController
                acceptableSedentaryTime:(NSTimeInterval)sedentaryTime
                   acceptableSlouchTime:(NSTimeInterval)slouchTime NS_DESIGNATED_INITIALIZER;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4OL-2c-gnC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4OL-2c-gnC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -34,8 +34,8 @@
                                 <color key="textColor" red="0.93333333730000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sedentary time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-o3-9L8">
-                                <rect key="frame" x="143" y="187" width="92" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left to break" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-o3-9L8">
+                                <rect key="frame" x="129" y="187" width="106" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="vWY-ex-58p"/>
                                 </constraints>
@@ -69,7 +69,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-xS-xbw">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.56078431370000004" green="1" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -88,12 +88,12 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vof-y3-Zea">
                                         <rect key="frame" x="0.0" y="15" width="600" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-8z-Mww">
-                                        <rect key="frame" x="0.0" y="50.5" width="600" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="50" width="600" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="36"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -132,7 +132,18 @@
                             <constraint firstItem="6aI-o3-9L8" firstAttribute="baseline" secondItem="1LB-r2-Lve" secondAttribute="baseline" id="rUN-OR-age"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Dashboard" id="pgw-J2-3tX"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="pgw-J2-3tX">
+                        <barButtonItem key="leftBarButtonItem" title="Slouching" id="ju9-Fs-2QL">
+                            <connections>
+                                <action selector="slouch:" destination="BYZ-38-t0r" id="z9u-we-aBq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sitting" id="b5E-eB-f36">
+                            <connections>
+                                <action selector="sit:" destination="BYZ-38-t0r" id="1vm-dr-owf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="balanceLabel" destination="kt0-xS-xbw" id="b4L-he-yHW"/>
                         <outlet property="progressLabelBadPositionTime" destination="HGm-4S-fVG" id="JOP-EL-YRq"/>
