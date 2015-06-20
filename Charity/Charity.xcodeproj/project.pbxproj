@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1725AFCF1B3591940093E139 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFCE1B3591940093E139 /* main.m */; };
 		1725AFD21B3591940093E139 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFD11B3591940093E139 /* AppDelegate.m */; };
-		1725AFD51B3591940093E139 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFD41B3591940093E139 /* ViewController.m */; };
 		1725AFD81B3591940093E139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1725AFD61B3591940093E139 /* Main.storyboard */; };
 		1725AFDA1B3591940093E139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1725AFD91B3591940093E139 /* Images.xcassets */; };
 		1725AFDD1B3591940093E139 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1725AFDB1B3591940093E139 /* LaunchScreen.xib */; };
@@ -29,9 +28,10 @@
 		1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1725B01A1B359DB10093E139 /* CoreBluetooth.framework */; };
 		1725B0201B35A6130093E139 /* ChairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B01F1B35A6130093E139 /* ChairModel.m */; };
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
-		CF6399161B35A5720067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6399151B35A5720067A460 /* ChairController.m */; };
+		CF6399211B35B4050067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991A1B35B4050067A460 /* ChairController.m */; };
+		CF6399221B35B4050067A460 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991D1B35B4050067A460 /* ViewController.m */; };
+		CF6399231B35B4050067A460 /* BalanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6399201B35B4050067A460 /* BalanceView.m */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
-		F51BF9371B35A55E001CCDB9 /* BalanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9361B35A55E001CCDB9 /* BalanceView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,6 @@
 		1725AFCE1B3591940093E139 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1725AFD01B3591940093E139 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1725AFD11B3591940093E139 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1725AFD31B3591940093E139 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1725AFD41B3591940093E139 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1725AFD71B3591940093E139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1725AFD91B3591940093E139 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1725AFDC1B3591940093E139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -86,15 +84,17 @@
 		1725B01E1B35A6130093E139 /* ChairModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChairModel.h; path = Charity/Chair/ChairModel.h; sourceTree = "<group>"; };
 		1725B01F1B35A6130093E139 /* ChairModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChairModel.m; path = Charity/Chair/ChairModel.m; sourceTree = "<group>"; };
 		36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
-		CF6399141B35A5720067A460 /* ChairController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairController.h; sourceTree = "<group>"; };
-		CF6399151B35A5720067A460 /* ChairController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChairController.m; sourceTree = "<group>"; };
-		CF6399171B35AF580067A460 /* ChairProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairProtocol.h; sourceTree = "<group>"; };
+		CF6399191B35B4050067A460 /* ChairController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairController.h; sourceTree = "<group>"; };
+		CF63991A1B35B4050067A460 /* ChairController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChairController.m; sourceTree = "<group>"; };
+		CF63991C1B35B4050067A460 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF63991D1B35B4050067A460 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF63991F1B35B4050067A460 /* BalanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceView.h; sourceTree = "<group>"; };
+		CF6399201B35B4050067A460 /* BalanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceView.m; sourceTree = "<group>"; };
+		CF6399251B35B4230067A460 /* ChairProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairProtocol.h; sourceTree = "<group>"; };
 		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
 		F51BF9331B3592FF001CCDB9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
-		F51BF9351B35A55E001CCDB9 /* BalanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceView.h; sourceTree = "<group>"; };
-		F51BF9361B35A55E001CCDB9 /* BalanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,21 +151,17 @@
 		1725AFCB1B3591940093E139 /* Charity */ = {
 			isa = PBXGroup;
 			children = (
+				CF6399241B35B4230067A460 /* Protocols */,
+				CF6399181B35B4050067A460 /* Controllers */,
+				CF63991E1B35B4050067A460 /* Views */,
 				1725AFD01B3591940093E139 /* AppDelegate.h */,
 				1725AFD11B3591940093E139 /* AppDelegate.m */,
-				1725AFD31B3591940093E139 /* ViewController.h */,
-				1725AFD41B3591940093E139 /* ViewController.m */,
 				1725AFD61B3591940093E139 /* Main.storyboard */,
 				1725AFD91B3591940093E139 /* Images.xcassets */,
 				1725AFDB1B3591940093E139 /* LaunchScreen.xib */,
 				1725AFCC1B3591940093E139 /* Supporting Files */,
 				F51BF9321B3592FF001CCDB9 /* Bank.h */,
 				F51BF9331B3592FF001CCDB9 /* Bank.m */,
-				F51BF9351B35A55E001CCDB9 /* BalanceView.h */,
-				F51BF9361B35A55E001CCDB9 /* BalanceView.m */,
-				CF6399171B35AF580067A460 /* ChairProtocol.h */,
-				CF6399141B35A5720067A460 /* ChairController.h */,
-				CF6399151B35A5720067A460 /* ChairController.m */,
 			);
 			path = Charity;
 			sourceTree = "<group>";
@@ -243,6 +239,34 @@
 				1725B01F1B35A6130093E139 /* ChairModel.m */,
 			);
 			name = Chair;
+			sourceTree = "<group>";
+		};
+		CF6399181B35B4050067A460 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF6399191B35B4050067A460 /* ChairController.h */,
+				CF63991A1B35B4050067A460 /* ChairController.m */,
+				CF63991C1B35B4050067A460 /* ViewController.h */,
+				CF63991D1B35B4050067A460 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF63991E1B35B4050067A460 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF63991F1B35B4050067A460 /* BalanceView.h */,
+				CF6399201B35B4050067A460 /* BalanceView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF6399241B35B4230067A460 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CF6399251B35B4230067A460 /* ChairProtocol.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F25B727E1E41F6D2336CE8B8 /* Pods */ = {
@@ -389,16 +413,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F51BF9371B35A55E001CCDB9 /* BalanceView.m in Sources */,
+				CF6399221B35B4050067A460 /* ViewController.m in Sources */,
 				1725B00F1B359D800093E139 /* JSTSensorConstants.m in Sources */,
 				1725B0151B359D800093E139 /* JSTHumiditySensor.m in Sources */,
+				CF6399211B35B4050067A460 /* ChairController.m in Sources */,
 				1725B0191B359D800093E139 /* JSTPressureSensor.m in Sources */,
 				1725B0121B359D800093E139 /* JSTAccelerometerSensor.m in Sources */,
 				1725B0181B359D800093E139 /* JSTMagnetometerSensor.m in Sources */,
-				1725AFD51B3591940093E139 /* ViewController.m in Sources */,
 				1725B00E1B359D800093E139 /* CBUUID+StringRepresentation.m in Sources */,
 				F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */,
 				1725AFD21B3591940093E139 /* AppDelegate.m in Sources */,
+				CF6399231B35B4050067A460 /* BalanceView.m in Sources */,
 				1725B0111B359D800093E139 /* JSTSensorTag.m in Sources */,
 				1725B0131B359D800093E139 /* JSTBaseSensor.m in Sources */,
 				1725B0201B35A6130093E139 /* ChairModel.m in Sources */,
@@ -407,7 +432,6 @@
 				1725AFCF1B3591940093E139 /* main.m in Sources */,
 				1725B0161B359D800093E139 /* JSTIRSensor.m in Sources */,
 				1725B0101B359D800093E139 /* JSTSensorManager.m in Sources */,
-				CF6399161B35A5720067A460 /* ChairController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
