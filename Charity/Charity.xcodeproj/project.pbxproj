@@ -37,6 +37,7 @@
 		F5FD2E3D1B35B21D00E71C40 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E3C1B35B21D00E71C40 /* TimerViewController.m */; };
 		F5FD2E421B35F3A000E71C40 /* BreakView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E411B35F3A000E71C40 /* BreakView.m */; };
 		F5FD2E441B35F4D700E71C40 /* BreakView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FD2E431B35F4D700E71C40 /* BreakView.xib */; };
+		F5FD2E4D1B36274F00E71C40 /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E4B1B36274F00E71C40 /* Canvas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		F5FD2E401B35F3A000E71C40 /* BreakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BreakView.h; path = Charity/BreakView.h; sourceTree = SOURCE_ROOT; };
 		F5FD2E411B35F3A000E71C40 /* BreakView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BreakView.m; path = Charity/BreakView.m; sourceTree = SOURCE_ROOT; };
 		F5FD2E431B35F4D700E71C40 /* BreakView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BreakView.xib; path = Charity/BreakView.xib; sourceTree = SOURCE_ROOT; };
+		F5FD2E4B1B36274F00E71C40 /* Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Canvas.m; path = Charity/Canvas.m; sourceTree = SOURCE_ROOT; };
+		F5FD2E4C1B36274F00E71C40 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Canvas.h; path = Charity/Canvas.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +280,8 @@
 		CF63991E1B35B4050067A460 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5FD2E4B1B36274F00E71C40 /* Canvas.m */,
+				F5FD2E4C1B36274F00E71C40 /* Canvas.h */,
 				F5FD2E401B35F3A000E71C40 /* BreakView.h */,
 				F5FD2E411B35F3A000E71C40 /* BreakView.m */,
 				F5FD2E431B35F4D700E71C40 /* BreakView.xib */,
@@ -456,6 +461,7 @@
 				1725B0201B35A6130093E139 /* ChairModel.m in Sources */,
 				1725B0141B359D800093E139 /* JSTGyroscopeSensor.m in Sources */,
 				1725B0171B359D800093E139 /* JSTKeysSensor.m in Sources */,
+				F5FD2E4D1B36274F00E71C40 /* Canvas.m in Sources */,
 				1725AFCF1B3591940093E139 /* main.m in Sources */,
 				17DF90A51B36075000BEF210 /* MicrophoneSensor.m in Sources */,
 				1725B0161B359D800093E139 /* JSTIRSensor.m in Sources */,

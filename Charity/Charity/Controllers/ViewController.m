@@ -14,6 +14,7 @@
 #import "TimerViewController.h"
 #import "ChairModel.h"
 #import "BreakView.h"
+#import "Canvas.h"
 #import "MicrophoneSensor.h"
 
 @interface ViewController () <BankDelegate, ChairControllerDelegate,
@@ -34,6 +35,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *lightLevelLabel;
 @property (nonatomic, weak) IBOutlet UILabel *temperatureLabel;
 @property(nonatomic, strong) MicrophoneSensor *microphone;
+@property (nonatomic, strong)Canvas*canvas;
 
 @end
 
@@ -57,11 +59,12 @@
          acceptableSlouchTime:20.0];
   self.chairController.delegate = self;
 
-  [self updateBalance:self.bank.balance];
 
+    [self updateBalance:0 aminated:NO];
   self.chairModel = [ChairModel new];
   self.chairModel.delegate = self.chairController;
   self.chairModel.connectionDelegate = self;
+
 }
 
 - (IBAction)sit:(id)sender {
@@ -72,17 +75,39 @@
   self.chairController.slouched = !self.chairController.slouched;
 }
 
-- (void)updateBalance:(CGFloat)balance {
-  self.balanceLabel.text =
+- (void)updateBalance:(CGFloat)balance aminated:(BOOL)animated {
 
-      [NSString stringWithFormat:@"Donated: %.2f €", balance];
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    [animation setFromValue:@(1.6f)];
-    [animation setToValue:@(1.0f)];
-    [animation setDuration:0.3];
-    [animation setRemovedOnCompletion:YES];
-    [self.balanceLabel.layer addAnimation:animation forKey:@"bounce"];
-    self.balanceLabel.layer.transform = CATransform3DIdentity;
+    if (animated) {
+//        self.balanceLabel.text = [NSString stringWithFormat:@"%@  ",[self.balanceLabel.text substringToIndex:self.balanceLabel.text.length-2]];
+
+    self.canvas = [[Canvas alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.canvas];
+        typeof(self) weakSelf __weak = self;
+        self.canvas.completion = ^() {
+
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+
+            [animation setFromValue:@(1.0f)];
+            [animation setToValue:@(1.6f)];
+            [animation setDuration:0.3];
+            animation.autoreverses=YES;
+            [animation setRemovedOnCompletion:YES];
+            [weakSelf.balanceLabel.layer addAnimation:animation forKey:@"bounce"];
+            weakSelf.balanceLabel.layer.transform = CATransform3DIdentity;
+            weakSelf.balanceLabel.text =
+
+            [NSString stringWithFormat:@"Donated: %.2f €", balance];
+        };
+
+
+
+
+
+    } else {
+        self.balanceLabel.text =
+
+        [NSString stringWithFormat:@"Donated: %.2f €", balance];
+    }
 }
 
 - (void)slouchingTimeExceeded {
@@ -96,6 +121,8 @@
 - (void)viewDidAppear:(BOOL)animated {
   //[self.bank authorize];
 
+
+
 }
 
 - (void)showBreakView {
@@ -107,7 +134,7 @@
 
 - (void)balanceDidChange {
 
-  [self updateBalance:self.bank.balance];
+  [self updateBalance:self.bank.balance aminated:YES];
 }
 - (void)paypalDidAuthorize {
 }
