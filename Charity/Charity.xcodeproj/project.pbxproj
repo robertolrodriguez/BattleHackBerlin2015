@@ -14,6 +14,7 @@
 		1725AFDA1B3591940093E139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1725AFD91B3591940093E139 /* Images.xcassets */; };
 		1725AFDD1B3591940093E139 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1725AFDB1B3591940093E139 /* LaunchScreen.xib */; };
 		1725AFE91B3591940093E139 /* CharityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFE81B3591940093E139 /* CharityTests.m */; };
+		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		1725AFE21B3591940093E139 /* CharityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1725AFE71B3591940093E139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1725AFE81B3591940093E139 /* CharityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharityTests.m; sourceTree = "<group>"; };
+		36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
+		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
+		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00898C34FFB7D1DE1ED44120 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1704AB9679B177506A47A7E /* libPods-Charity.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1725AFC01B3591940093E139 = {
 			isa = PBXGroup;
 			children = (
 				1725AFCB1B3591940093E139 /* Charity */,
 				1725AFE51B3591940093E139 /* CharityTests */,
 				1725AFCA1B3591940093E139 /* Products */,
+				F25B727E1E41F6D2336CE8B8 /* Pods */,
+				00898C34FFB7D1DE1ED44120 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +134,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F25B727E1E41F6D2336CE8B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */,
+				36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1725AFEC1B3591940093E139 /* Build configuration list for PBXNativeTarget "Charity" */;
 			buildPhases = (
+				BB010F230C60BCEA4AB8775D /* Check Pods Manifest.lock */,
 				1725AFC51B3591940093E139 /* Sources */,
 				1725AFC61B3591940093E139 /* Frameworks */,
 				1725AFC71B3591940093E139 /* Resources */,
+				31AFB4E64F93B7828813506E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31AFB4E64F93B7828813506E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Charity/Pods-Charity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB010F230C60BCEA4AB8775D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1725AFC51B3591940093E139 /* Sources */ = {
@@ -347,6 +406,7 @@
 		};
 		1725AFED1B3591940093E139 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Charity/Info.plist;
@@ -357,6 +417,7 @@
 		};
 		1725AFEE1B3591940093E139 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Charity/Info.plist;
@@ -418,6 +479,7 @@
 				1725AFEE1B3591940093E139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1725AFEF1B3591940093E139 /* Build configuration list for PBXNativeTarget "CharityTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +488,7 @@
 				1725AFF11B3591940093E139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

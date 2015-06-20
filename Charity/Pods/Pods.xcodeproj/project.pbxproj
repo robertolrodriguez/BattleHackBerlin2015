@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87175468025C8C7AC1678859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264F69B88E5AC7D6C3DFBCEB /* Foundation.framework */; };
+		CDACC2BFB1ED16E02D55CF21 /* Pods-Charity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB13E58085474D3355C6AE3 /* Pods-Charity-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08A0526C7E84BF6845C9C6E8 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = PayPalMobile/CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		1A4733F5AA39C79D9F0C2E63 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = PayPalMobile/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		264F69B88E5AC7D6C3DFBCEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3885FE4B2350AF3111B9564B /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = PayPalMobile/CardIOView.h; sourceTree = "<group>"; };
+		4362D1318C4BFEE7B500608D /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
+		4851D299C5E1310738B3820F /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		4BE7F296D70CFFEEA569998A /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		5D6567A11BEB71C09746C5B6 /* Pods-Charity-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Charity-resources.sh"; sourceTree = "<group>"; };
+		60E57D241567CC93CDE17804 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = PayPalMobile/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		6DB13E58085474D3355C6AE3 /* Pods-Charity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Charity-dummy.m"; sourceTree = "<group>"; };
+		728BC86EA13541131000605A /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
+		734857A9A89468CDBDCA5F18 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = PayPalMobile/CardIOViewDelegate.h; sourceTree = "<group>"; };
+		76B45276BF10FEF6ABA68136 /* Pods-Charity-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Charity-environment.h"; sourceTree = "<group>"; };
+		775F1E2F957EAB6E67B0965C /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		819FBDC52E730242102E5427 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
+		83D1B11E721A37E5E848CA71 /* Pods-Charity-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Charity-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8A54C72D457655B19191C2C4 /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F2DEE694EB15B45CBD91431 /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = PayPalMobile/CardIOUtilities.h; sourceTree = "<group>"; };
+		A23B1A3F44FBAB65919A7647 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3DB12360A56053C08BB11F1 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
+		A4A95F724CA327240262C78D /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
+		B372D6C2A46BC81CDE78B7EC /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = PayPalMobile/CardIODetectionMode.h; sourceTree = "<group>"; };
+		B88132410FEE78A5F0B4B245 /* Pods-Charity-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Charity-acknowledgements.plist"; sourceTree = "<group>"; };
+		C715E25ECCC4CB369A9172B9 /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = PayPalMobile/CardIO.h; sourceTree = "<group>"; };
+		FAFF7EDAB8C551DAF9463A05 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8BA754588DC7CA8940281CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87175468025C8C7AC1678859 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D8146B5948EBC7BD062F540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD8B50BA2278F229D35D6BF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41FE967E4DA52D0C2C2BD204 /* Pods-Charity */ = {
+			isa = PBXGroup;
+			children = (
+				83D1B11E721A37E5E848CA71 /* Pods-Charity-acknowledgements.markdown */,
+				B88132410FEE78A5F0B4B245 /* Pods-Charity-acknowledgements.plist */,
+				6DB13E58085474D3355C6AE3 /* Pods-Charity-dummy.m */,
+				76B45276BF10FEF6ABA68136 /* Pods-Charity-environment.h */,
+				5D6567A11BEB71C09746C5B6 /* Pods-Charity-resources.sh */,
+				819FBDC52E730242102E5427 /* Pods-Charity.debug.xcconfig */,
+				A3DB12360A56053C08BB11F1 /* Pods-Charity.release.xcconfig */,
+			);
+			name = "Pods-Charity";
+			path = "Target Support Files/Pods-Charity";
+			sourceTree = "<group>";
+		};
+		5397B48483C86C7FE67C13A6 = {
+			isa = PBXGroup;
+			children = (
+				A23B1A3F44FBAB65919A7647 /* Podfile */,
+				2D8146B5948EBC7BD062F540 /* Frameworks */,
+				5B9E6082DC56FB5CB45082EC /* Pods */,
+				F0A0D7ED62D8C87EFA5E2282 /* Products */,
+				A5D63335CC9F65EF8FA47855 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		5B9E6082DC56FB5CB45082EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B926C3B14CC4959365470679 /* PayPal-iOS-SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9FD8B50BA2278F229D35D6BF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				264F69B88E5AC7D6C3DFBCEB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A5D63335CC9F65EF8FA47855 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41FE967E4DA52D0C2C2BD204 /* Pods-Charity */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B926C3B14CC4959365470679 /* PayPal-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				C715E25ECCC4CB369A9172B9 /* CardIO.h */,
+				1A4733F5AA39C79D9F0C2E63 /* CardIOCreditCardInfo.h */,
+				B372D6C2A46BC81CDE78B7EC /* CardIODetectionMode.h */,
+				08A0526C7E84BF6845C9C6E8 /* CardIOPaymentViewController.h */,
+				60E57D241567CC93CDE17804 /* CardIOPaymentViewControllerDelegate.h */,
+				9F2DEE694EB15B45CBD91431 /* CardIOUtilities.h */,
+				3885FE4B2350AF3111B9564B /* CardIOView.h */,
+				734857A9A89468CDBDCA5F18 /* CardIOViewDelegate.h */,
+				4362D1318C4BFEE7B500608D /* PayPalConfiguration.h */,
+				4BE7F296D70CFFEEA569998A /* PayPalFuturePaymentViewController.h */,
+				A4A95F724CA327240262C78D /* PayPalMobile.h */,
+				4851D299C5E1310738B3820F /* PayPalOAuthScopes.h */,
+				728BC86EA13541131000605A /* PayPalPayment.h */,
+				FAFF7EDAB8C551DAF9463A05 /* PayPalPaymentViewController.h */,
+				775F1E2F957EAB6E67B0965C /* PayPalProfileSharingViewController.h */,
+			);
+			path = "PayPal-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		F0A0D7ED62D8C87EFA5E2282 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A54C72D457655B19191C2C4 /* libPods-Charity.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E571BEA48C1A486C73FB2AD6 /* Pods-Charity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C8C2E5CB4BF7377733E390E /* Build configuration list for PBXNativeTarget "Pods-Charity" */;
+			buildPhases = (
+				976A03BA0627E1B429EC1D9F /* Sources */,
+				B8BA754588DC7CA8940281CA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Charity";
+			productName = "Pods-Charity";
+			productReference = 8A54C72D457655B19191C2C4 /* libPods-Charity.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFDD6A044DDB5BC51A25E602 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = BA62650F7D9A076FF0262743 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5397B48483C86C7FE67C13A6;
+			productRefGroup = F0A0D7ED62D8C87EFA5E2282 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E571BEA48C1A486C73FB2AD6 /* Pods-Charity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		976A03BA0627E1B429EC1D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDACC2BFB1ED16E02D55CF21 /* Pods-Charity-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3AD25C24228FFA73E89A0D67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5F07F44FF9CA5FA42DBF2469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 819FBDC52E730242102E5427 /* Pods-Charity.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8BE08E299EDC32724F57FF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4F7635E0CE277DBB88654C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3DB12360A56053C08BB11F1 /* Pods-Charity.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C8C2E5CB4BF7377733E390E /* Build configuration list for PBXNativeTarget "Pods-Charity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F07F44FF9CA5FA42DBF2469 /* Debug */,
+				D4F7635E0CE277DBB88654C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA62650F7D9A076FF0262743 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AD25C24228FFA73E89A0D67 /* Debug */,
+				8BE08E299EDC32724F57FF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFDD6A044DDB5BC51A25E602 /* Project object */;
+}
