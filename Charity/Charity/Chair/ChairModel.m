@@ -51,11 +51,11 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
 
 - (void)manager:(JSTSensorManager *)manager didConnectSensor:(JSTSensorTag *)sensor {
     BOOL allSensorsConnected = YES;
-    if ([[sensor.peripheral.identifier UUIDString] isEqualToString:deviceBackID]) {
-        self.upperSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor];
+    if (!self.upperSensor && [[sensor.peripheral.identifier UUIDString] isEqualToString:deviceBackID]) {
+        self.upperSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor irSensor:sensor.irSensor];
         self.upperSensor.chairSensorDelegate = self;
-    } else  if ([[sensor.peripheral.identifier UUIDString] isEqualToString:deviceAssID]) {
-        self.lowerSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor];
+    } else if (!self.lowerSensor && [[sensor.peripheral.identifier UUIDString] isEqualToString:deviceAssID]) {
+        self.lowerSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor irSensor:sensor.irSensor];
         self.lowerSensor.chairSensorDelegate = self;
     }
     for (JSTSensorTag *sensorTag in self.sensors) {

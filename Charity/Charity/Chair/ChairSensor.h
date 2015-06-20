@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class ChairSensor, JSTKeysSensor;
+@class ChairSensor, JSTKeysSensor, JSTIRSensor;
 @protocol ChairSensor <NSObject>
 
 -(void)isTouching:(BOOL)isTouching sensor:(ChairSensor *)sensor;
@@ -18,7 +18,7 @@
 @interface ChairSensor : NSObject
 
 @property (nonatomic, weak) id <ChairSensor> chairSensorDelegate;
-- (instancetype)initWithKeysSensor:(JSTKeysSensor *)keysSensor;
+- (instancetype)initWithKeysSensor:(JSTKeysSensor *)keysSensor irSensor:(JSTIRSensor *)irSensor;
 @property(nonatomic, assign) BOOL isTouching;
 
 
