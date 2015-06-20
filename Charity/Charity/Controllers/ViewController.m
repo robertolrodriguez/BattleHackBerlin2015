@@ -14,9 +14,6 @@
 #import "TimerViewController.h"
 #import "ChairModel.h"
 #import "BreakView.h"
-
-@interface ViewController () <BankDelegate,
-                              ChairControllerDelegate,
 #import "MicrophoneSensor.h"
 
 @interface ViewController () <BankDelegate, ChairControllerDelegate,
