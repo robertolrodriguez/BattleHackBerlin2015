@@ -72,36 +72,49 @@
   return self;
 }
 
-- (void)payPalFuturePaymentViewController:(PayPalFuturePaymentViewController *)futurePaymentViewController didAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization {
-    [futurePaymentViewController dismissViewControllerAnimated:YES completion:nil];
-    [self.delegate paypalDidAuthorize];
+- (void)payPalFuturePaymentViewController:
+            (PayPalFuturePaymentViewController *)futurePaymentViewController
+                didAuthorizeFuturePayment:
+                    (NSDictionary *)futurePaymentAuthorization {
+  [futurePaymentViewController dismissViewControllerAnimated:YES
+                                                  completion:nil];
+  [self.delegate paypalDidAuthorize];
 }
 
-- (void)payPalFuturePaymentDidCancel:(PayPalFuturePaymentViewController *)futurePaymentViewController {
-
+- (void)payPalFuturePaymentDidCancel:
+    (PayPalFuturePaymentViewController *)futurePaymentViewController {
+  [futurePaymentViewController dismissViewControllerAnimated:YES
+                                                  completion:nil];
 }
 
-- (void)payPalFuturePaymentViewController:(PayPalFuturePaymentViewController *)futurePaymentViewController willAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization completionBlock:(PayPalFuturePaymentDelegateCompletionBlock)completionBlock {
-    if (completionBlock) completionBlock();
+- (void)
+payPalFuturePaymentViewController:
+    (PayPalFuturePaymentViewController *)futurePaymentViewController
+       willAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization
+                  completionBlock:(PayPalFuturePaymentDelegateCompletionBlock)
+                                      completionBlock {
+  if (completionBlock)
+    completionBlock();
 }
 
 - (void)authorize {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        PayPalFuturePaymentViewController *fpViewController;
-        fpViewController = [[PayPalFuturePaymentViewController alloc]
-                            initWithConfiguration:self.payPalConfig
-                            delegate:self];
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    PayPalFuturePaymentViewController *fpViewController;
+    fpViewController = [[PayPalFuturePaymentViewController alloc]
+        initWithConfiguration:self.payPalConfig
+                     delegate:self];
 
-        // Present the PayPalFuturePaymentViewController
-        [self.vc presentViewController:fpViewController animated:YES completion:nil];
-    });
-
+    // Present the PayPalFuturePaymentViewController
+    [self.vc presentViewController:fpViewController
+                          animated:YES
+                        completion:nil];
+  });
 }
 
 - (void)charge {
-    self.balance += 0.4;
-    [self.delegate balanceDidChange];
+  self.balance += 0.4;
+  [self.delegate balanceDidChange];
 }
 
 - (CGFloat)balance {
