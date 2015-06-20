@@ -91,6 +91,7 @@
 		CF63991F1B35B4050067A460 /* BalanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceView.h; sourceTree = "<group>"; };
 		CF6399201B35B4050067A460 /* BalanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceView.m; sourceTree = "<group>"; };
 		CF6399251B35B4230067A460 /* ChairProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairProtocol.h; sourceTree = "<group>"; };
+		CF6399261B35C2B00067A460 /* ChairControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairControllerDelegate.h; sourceTree = "<group>"; };
 		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6399251B35B4230067A460 /* ChairProtocol.h */,
+				CF6399261B35C2B00067A460 /* ChairControllerDelegate.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";

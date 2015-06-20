@@ -10,9 +10,10 @@
 #import "Bank.h"
 #import <KAProgressLabel/KAProgressLabel.h>
 #import "BalanceView.h"
+#import "ChairControllerDelegate.h"
 #import "ChairController.h"
 
-@interface ViewController () <BankDelegate>
+@interface ViewController () <BankDelegate , ChairControllerDelegate>
 @property (nonatomic, strong) Bank *bank;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
@@ -34,10 +35,20 @@
     self.chairController = [[ChairController alloc] initWithSedentaryLabel:self.progressLabelSedentaryTime
                                                                slouchLabel:self.progressLabelBadPositionTime
                                                             silhuetteImage:self.silhuetteImageView
-                                                   acceptableSedentaryTime:20.0f
-                                                      acceptableSlouchTime:5.0f];
+                                                   acceptableSedentaryTime:60.0 * 1.0
+                                                      acceptableSlouchTime:10.0];
 
     [self.balanceView updateBalance:self.bank.balance];
+
+    self.chairController.sat = YES;
+}
+
+- (void)sedentaryTimeExceeded {
+    // break time!
+}
+
+- (void)slouchingTimeExceeded {
+    [self.bank charge];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -46,12 +57,10 @@
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.bank charge];
-        self.chairController.sat = YES;
+
+        self.chairController.sat = NO;
+        self.chairController.slouched = YES;
     });
-}
-
-- (void)setSedentaryTime:(NSTimeInterval)time {
-
 }
 
 - (void)balanceDidChange {
