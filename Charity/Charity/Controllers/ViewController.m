@@ -11,7 +11,7 @@
 #import <KAProgressLabel/KAProgressLabel.h>
 
 #import "ChairController.h"
-#import "TimerView.h"
+#import "TimerViewController.h"
 #import "ChairModel.h"
 
 @interface ViewController () <BankDelegate>
@@ -20,11 +20,12 @@
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
 
-@property (weak, nonatomic) IBOutlet TimerView*timerView;
+@property (strong, nonatomic) IBOutlet TimerViewController*timerViewController;
 @property (nonatomic, strong) ChairModel *chairModel;
 
 @property (nonatomic, strong) ChairController *chairController;
 @property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeOfWorkLabel;
 
 @end
 
@@ -47,6 +48,7 @@
 
     self.chairModel = [ChairModel new];
     self.chairModel.delegate = self.chairController;
+    self.timerViewController = [[TimerViewController alloc] initWithLabel:self.timeOfWorkLabel];
 }
 
 - (void)updateBalance:(CGFloat)balance {
@@ -65,22 +67,22 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerView start];
+            [self.timerViewController start];
         });
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(13 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerView stop];
+            [self.timerViewController stop];
         });
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(18 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerView start];
+            [self.timerViewController start];
         });
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerView stop];
+            [self.timerViewController stop];
         });
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(26 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerView start];
+            [self.timerViewController start];
         });
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(36 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.timerView stop];
+            [self.timerViewController stop];
         });
     });
 }

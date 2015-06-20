@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimerView : UIView
+@interface TimerViewController : NSObject
+
+- (id)initWithLabel:(UILabel*)label;
 
 - (void)start;
 - (void)stop;

@@ -82,11 +82,31 @@
                                     <constraint firstAttribute="trailing" secondItem="kt0-xS-xbw" secondAttribute="trailing" id="vOj-W2-Exb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-f8-nos" customClass="TimerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-f8-nos">
                                 <rect key="frame" x="0.0" y="334" width="600" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vof-y3-Zea">
+                                        <rect key="frame" x="0.0" y="15" width="600" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-8z-Mww">
+                                        <rect key="frame" x="0.0" y="50.5" width="600" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
+                                    <constraint firstItem="vof-y3-Zea" firstAttribute="leading" secondItem="CwT-f8-nos" secondAttribute="leading" id="4DL-eH-8ab"/>
+                                    <constraint firstAttribute="trailing" secondItem="OR5-8z-Mww" secondAttribute="trailing" id="6Ss-K9-fVT"/>
+                                    <constraint firstItem="vof-y3-Zea" firstAttribute="top" secondItem="CwT-f8-nos" secondAttribute="top" constant="15" id="NmW-b7-vb6"/>
                                     <constraint firstAttribute="height" constant="150" id="RyD-at-pEh"/>
+                                    <constraint firstItem="OR5-8z-Mww" firstAttribute="leading" secondItem="CwT-f8-nos" secondAttribute="leading" id="bkA-bG-L88"/>
+                                    <constraint firstAttribute="trailing" secondItem="vof-y3-Zea" secondAttribute="trailing" id="lfB-ba-yni"/>
+                                    <constraint firstItem="OR5-8z-Mww" firstAttribute="top" secondItem="vof-y3-Zea" secondAttribute="bottom" constant="15" id="qiF-6k-8MR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -118,7 +138,7 @@
                         <outlet property="progressLabelBadPositionTime" destination="HGm-4S-fVG" id="JOP-EL-YRq"/>
                         <outlet property="progressLabelSedentaryTime" destination="1LB-r2-Lve" id="BXx-fq-q6B"/>
                         <outlet property="silhuetteImageView" destination="v17-ia-dZo" id="G5g-jQ-Axy"/>
-                        <outlet property="timerView" destination="CwT-f8-nos" id="335-Ac-Bdh"/>
+                        <outlet property="timeOfWorkLabel" destination="OR5-8z-Mww" id="DqZ-4Z-RNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

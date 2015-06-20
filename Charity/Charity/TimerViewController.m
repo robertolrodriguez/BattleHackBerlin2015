@@ -6,16 +6,22 @@
 //  Copyright (c) 2015 BattleHack. All rights reserved.
 //
 
-#import "TimerView.h"
+#import "TimerViewController.h"
 
-@interface TimerView () {
+@interface TimerViewController () {
   NSTimer *timer;
   NSTimeInterval time;
     UILabel*label;
 }
 @end
 
-@implementation TimerView
+@implementation TimerViewController
+
+- (id)initWithLabel:(UILabel*)_label {
+    self = [super init];
+    label=_label;
+    return self;
+}
 
 - (void)start {
 
@@ -24,12 +30,6 @@
                                          selector:@selector(timerDidTick:)
                                          userInfo:nil
                                           repeats:YES];
-    if (!label) {
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-        label.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:label];
-        label.textColor = [UIColor whiteColor];
-    }
 }
 
 - (void)stop {
@@ -49,7 +49,7 @@
     NSString* timeString = [NSString stringWithFormat:@"%.1lu:%.2lu:%.2lu", (unsigned long)hours, (unsigned long)minutes, (unsigned long)seconds];
     NSLog(@"%@", timeString);
     label.text = timeString;
-    [label sizeToFit];
+    //[label sizeToFit];
 }
 
 @end
