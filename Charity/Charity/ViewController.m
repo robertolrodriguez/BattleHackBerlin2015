@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "Bank.h"
 #import <KAProgressLabel/KAProgressLabel.h>
 
-@interface ViewController ()
+@interface ViewController () <BankDelegate>
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
+@property (nonatomic, strong)Bank *bank;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
 @end
@@ -20,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.bank = [[Bank alloc] initWithViewController:self];
+    self.bank.delegate = self;
 
     self.progressLabelBadPositionTime.labelVCBlock = ^(KAProgressLabel *label) {
         label.text = [NSString stringWithFormat:@"%.0f%%", (label.progress * 100)];
@@ -36,6 +40,31 @@
                                            delay:5.0];
 
     [self setUpCirculars];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [self.bank authorize];
+}
+
+- (void)balanceDidChange {
+
+    [self.progressLabelBadPositionTime setProgress:0.5
+                                            timing:TPPropertyAnimationTimingEaseOut
+                                          duration:1.0
+                                             delay:5.0];
+
+    [self.progressLabelSedentaryTime setProgress:0.5
+                                          timing:TPPropertyAnimationTimingEaseOut
+                                        duration:1.0
+                                           delay:5.0];
+
+    [self setUpCirculars];
+
+}
+- (void)paypalDidAuthorize {
+
 
 }
 
