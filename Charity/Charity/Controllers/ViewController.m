@@ -14,7 +14,7 @@
 #import "TimerViewController.h"
 #import "ChairModel.h"
 
-@interface ViewController () <BankDelegate , ChairControllerDelegate>
+@interface ViewController () <BankDelegate , ChairControllerDelegate, ConnectionDelegate>
 @property (nonatomic, strong) Bank *bank;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
@@ -52,6 +52,7 @@
 
     self.chairModel = [ChairModel new];
     self.chairModel.delegate = self.chairController;
+    self.chairModel.connectionDelegate = self;
 }
 
 - (IBAction)sit:(id)sender {
@@ -87,5 +88,39 @@
 
 
 }
+
+- (void)newConnectionState:(ConnectionState)state {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        self.statusLabel.textColor = [UIColor orangeColor];
+        switch (state) {
+            case ConnectionStateConnected:
+                self.statusLabel.text = @"Connected!";
+                self.statusLabel.textColor = [UIColor greenColor];
+
+                break;
+            case ConnectionStateConnetcting:
+                self.statusLabel.text = @"Connecting...";
+                break;
+            case ConnectionStateFoundDevice:
+                self.statusLabel.text = @"Found device";
+                break;
+            case ConnectionStateError:
+                self.statusLabel.text = @"Error :-(";
+                self.statusLabel.textColor = [UIColor redColor];
+
+                break;
+            case ConnectionStateSearchingForDevice:
+                self.statusLabel.text = @"Searching for device";
+                break;
+            case ConnectionStateStartedConnection:
+                self.statusLabel.text = @"Started connecting";
+                break;
+            default:
+                break;
+        }
+    });
+}
+
 
 @end

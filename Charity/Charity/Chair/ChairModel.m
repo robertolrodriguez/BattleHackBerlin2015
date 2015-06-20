@@ -65,6 +65,8 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
     }
     if (allSensorsConnected) {
         NSLog(@"All conneteced!");
+        [self.connectionDelegate newConnectionState:ConnectionStateConnected];
+
     } else {
         JSTSensorTag *next = nil;
         for (JSTSensorTag *sensorTag in self.sensors) {
@@ -73,6 +75,8 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
                 break;
             }
         }
+        [self.connectionDelegate newConnectionState:ConnectionStateConnetcting];
+
         [self.sensorManager connectSensorWithUUID:next.peripheral.identifier];
     }
 }
@@ -85,16 +89,21 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
     dispatch_async(dispatch_get_main_queue(), ^{
         [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     });
+    [self.connectionDelegate newConnectionState:ConnectionStateError];
+
 }
 
 - (void)tryToConnectToSensors:(NSArray *)sensors {
     self.sensors = sensors;
+    [self.connectionDelegate newConnectionState:ConnectionStateStartedConnection];
     [self.sensorManager connectSensorWithUUID:((JSTSensorTag *)[self.sensors firstObject]).peripheral.identifier];
 }
 
 - (void)manager:(JSTSensorManager *)manager didDiscoverSensor:(JSTSensorTag *)sensor {
     if (self.sensorManager.sensors.count == 2) {
         [self tryToConnectToSensors:self.sensorManager.sensors];
+        [self.connectionDelegate newConnectionState:ConnectionStateFoundDevice];
+
         [manager stopScanning];
     }
 }
@@ -102,6 +111,7 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
 - (void)manager:(JSTSensorManager *)manager didChangeStateTo:(CBCentralManagerState)state {
     if (manager.state == CBCentralManagerStatePoweredOn) {
         //[manager startScanning:@[[CBUUID UUIDWithString:deviceAssID],[CBUUID UUIDWithString: deviceBackID]]];
+        [self.connectionDelegate newConnectionState:ConnectionStateSearchingForDevice];
         [manager startScanning:nil];
     }
 
