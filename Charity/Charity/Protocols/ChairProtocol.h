@@ -11,4 +11,5 @@
 @protocol ChairProtocol <NSObject>
 - (void)setSat:(BOOL)sat;
 - (void)setSlouched:(BOOL)slouched;
+
 @end

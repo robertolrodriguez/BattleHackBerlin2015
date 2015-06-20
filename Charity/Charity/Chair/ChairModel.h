@@ -10,9 +10,18 @@ typedef NS_ENUM(NSUInteger, ConnectionState) {
     ConnectionStateError
 };
 
+typedef NS_ENUM(NSUInteger, TemperatureState) {
+    TemperatureStateLow,
+    TemperatureStateMedium,
+    TemperatureStateHigh
+};
+
+
+
 @protocol ConnectionDelegate <NSObject>
 
 - (void)newConnectionState:(ConnectionState)state;
+- (void)newAmbientTemperature:(TemperatureState)ambientTemp;
 
 @end
 

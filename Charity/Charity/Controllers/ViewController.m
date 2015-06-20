@@ -148,4 +148,27 @@
 
 }
 
+- (void)newAmbientTemperature:(TemperatureState)ambientTemp {
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+    switch (ambientTemp) {
+        case TemperatureStateHigh:
+            self.temperatureLabel.text = @"High";
+            self.temperatureLabel.textColor = [UIColor orangeColor];
+            break;
+        case TemperatureStateMedium:
+            self.temperatureLabel.text = @"Good";
+            self.temperatureLabel.textColor = [UIColor whiteColor];
+            break;
+        case TemperatureStateLow:
+            self.temperatureLabel.text = @"Low";
+            self.temperatureLabel.textColor = [UIColor blueColor];
+            break;
+            
+        default:
+            break;
+    }
+    });
+}
+
 @end
