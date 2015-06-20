@@ -144,7 +144,7 @@ NSString *const JSTSensorTagErrorDomain = @"JSTSensorTagErrorDomain";
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
-    NSLog(@"%s %@", __PRETTY_FUNCTION__, peripheral);
+    //NSLog(@"%s %@", __PRETTY_FUNCTION__, peripheral);
     JSTSensorTag *sensor = self.peripherals[peripheral.identifier.UUIDString];
     if (!sensor && ([peripheral.name isEqualToString:@"SensorTag"] || [peripheral.name isEqualToString:@"TI BLE Sensor Tag"])) {
         sensor = [[JSTSensorTag alloc] initWithPeripheral:peripheral];

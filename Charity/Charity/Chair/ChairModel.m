@@ -14,8 +14,8 @@
 @end
 
 
-NSString *deviceBackID = @"F9478D87-4FC2-0F34-E522-9B02EED5D211";
-NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
+NSString *deviceAssID = @"F9478D87-4FC2-0F34-E522-9B02EED5D211";
+NSString *deviceBackID= @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
 
 @implementation ChairModel
 
@@ -60,24 +60,13 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
         self.lowerSensor = [[ChairSensor alloc]initWithKeysSensor:sensor.keysSensor irSensor:sensor.irSensor];
         self.lowerSensor.chairSensorDelegate = self;
     }
-    for (JSTSensorTag *sensorTag in self.sensors) {
-        allSensorsConnected &= (sensorTag.peripheral.state == CBPeripheralStateConnected);
-    }
-    if (allSensorsConnected) {
-        NSLog(@"All conneteced!");
+    
+    if (!self.upperSensor) {
+        [manager connectSensorWithUUID:[[NSUUID alloc] initWithUUIDString:deviceBackID]];
+        [self.connectionDelegate newConnectionState:ConnectionStateConnetcting];
+    } else {
         [self.connectionDelegate newConnectionState:ConnectionStateConnected];
 
-    } else {
-        JSTSensorTag *next = nil;
-        for (JSTSensorTag *sensorTag in self.sensors) {
-            if (sensorTag.peripheral.state != CBPeripheralStateConnected) {
-                next = sensorTag;
-                break;
-            }
-        }
-        [self.connectionDelegate newConnectionState:ConnectionStateConnetcting];
-
-        [self.sensorManager connectSensorWithUUID:next.peripheral.identifier];
     }
 }
 
@@ -112,7 +101,8 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
     if (manager.state == CBCentralManagerStatePoweredOn) {
         //[manager startScanning:@[[CBUUID UUIDWithString:deviceAssID],[CBUUID UUIDWithString: deviceBackID]]];
         [self.connectionDelegate newConnectionState:ConnectionStateSearchingForDevice];
-        [manager startScanning:nil];
+        //[manager startScanning:nil];
+        [manager connectSensorWithUUID:[[NSUUID alloc] initWithUUIDString:deviceAssID]];
     }
 
 }
