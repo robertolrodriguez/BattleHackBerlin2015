@@ -62,9 +62,16 @@
 
     if (sat) {
          [self.timerViewController start];
+
+        if (self.slouched) {
+            [self sedentaryTimerStart:sat];
+        }
+
     } else {
         [self.timerViewController stop];
     }
+
+    self.silhuetteImageView.image = self.slouched && sat ? [UIImage imageNamed:@"silhuette-red"] : [UIImage imageNamed:@"silhuette"] ;
 
     [UIView animateWithDuration:0.3 animations:^{
         self.silhuetteImageView.alpha = sat ? 0.8f : 0.4f;
@@ -80,6 +87,8 @@
     }
 
     _slouched = slouched;
+
+    self.silhuetteImageView.image = _slouched && self.sat ? [UIImage imageNamed:@"silhuette-red"] : [UIImage imageNamed:@"silhuette"] ;
 
     [self slouchTimerStart:slouched];
 }
@@ -97,6 +106,8 @@
     }
 
     [self.sedentaryTimer invalidate];
+
+    self.sedentaryTime = 0.0;
 }
 
 - (void)sedentaryTick:(id)info {

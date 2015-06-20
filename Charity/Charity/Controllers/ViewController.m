@@ -43,10 +43,9 @@
                                                                slouchLabel:self.progressLabelBadPositionTime
                                                             silhuetteImage:self.silhuetteImageView
                                                        workTimerController:self.timerViewController
-                                                   acceptableSedentaryTime:10.0 * 1.0
-                                                      acceptableSlouchTime:5.0];
+                                                   acceptableSedentaryTime:60.0 * 30.0
+                                                      acceptableSlouchTime:30.0];
     self.chairController.delegate = self;
-
 
     [self updateBalance:self.bank.balance];
 
