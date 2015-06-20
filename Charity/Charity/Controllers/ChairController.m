@@ -7,6 +7,7 @@
 //
 
 #import <KAProgressLabel/KAProgressLabel.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "TimerViewController.h"
 #import "ChairController.h"
 
@@ -70,11 +71,11 @@
         [self slouchTimerStart:sat & self.slouched];
     }
 
-    self.silhuetteImageView.image = self.slouched && sat ? [UIImage imageNamed:@"silhuette-red"] : [UIImage imageNamed:@"silhuette"] ;
+    self.silhuetteImageView.image = [self imageForSat:sat slouched:self.slouched];
 
-    [UIView animateWithDuration:0.3 animations:^{
-        self.silhuetteImageView.alpha = sat ? 0.8f : 0.4f;
-    }];
+//    [UIView animateWithDuration:0.3 animations:^{
+//        self.silhuetteImageView.alpha = sat ? 0.8f : 0.4f;
+//    }];
 
     [self sedentaryTimerStart:sat];
 }
@@ -87,13 +88,17 @@
 
     _slouched = slouched;
 
-    self.silhuetteImageView.image = _slouched && self.sat ? [UIImage imageNamed:@"silhuette-red"] : [UIImage imageNamed:@"silhuette"] ;
-
+    self.silhuetteImageView.image = [self imageForSat:self.sat slouched:slouched];
     if (self.sat) {
         [self slouchTimerStart:slouched];
     }
 }
 
+- (UIImage *)imageForSat:(BOOL)sat slouched:(BOOL)slouched {
+    return slouched && sat ? [UIImage imageNamed:@"silhuette-red"]
+                           : ( sat ? [UIImage imageNamed:@"silhuette"]
+                                   : [UIImage imageNamed:@"silhuette-empty"] ) ;
+}
 
 - (void)sedentaryTimerStart:(BOOL)start {
 
@@ -123,6 +128,8 @@
                                                              selector:@selector(slouchTick:)
                                                              userInfo:nil
                                                               repeats:YES];
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 
         return;
     }
@@ -157,7 +164,9 @@
 
     CGFloat percentage = (CGFloat) 1.0 - (slouchTime / self.acceptableSlouchTime);
 
-    [self setLabel:self.progressLabelBadPositionTime withTime:self.acceptableSlouchTime - slouchTime percentage:percentage];
+    [self setLabel:self.progressLabelBadPositionTime
+          withTime:self.acceptableSlouchTime - slouchTime
+        percentage:percentage];
 
     if (slouchTime >= self.acceptableSlouchTime) {
         [self slouchTimerStart:NO];
@@ -182,11 +191,12 @@
 
 - (void)setUpViews {
 
-    self.silhuetteImageView.alpha = 0.5f;
+    self.silhuetteImageView.alpha = 1.0f;
+
+    self.silhuetteImageView.image = [self imageForSat:self.sat slouched:self.slouched];
 
     [self setLabel:self.progressLabelBadPositionTime withTime:self.acceptableSlouchTime percentage:1.0];
     [self setLabel:self.progressLabelSedentaryTime withTime:self.acceptableSedentaryTime percentage:1.0];
-
 
     self.progressLabelBadPositionTime.fillColor = [UIColor clearColor];
     self.progressLabelBadPositionTime.trackColor = [UIColor colorWithRed:0.149020 green:0.031373 blue:0.062745 alpha:1.0];
