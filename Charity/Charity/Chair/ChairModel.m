@@ -24,20 +24,22 @@ NSString *deviceAssID = @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
 }
 
 - (void)updateState {
-    if (self.lowerSensor.isTouching && self.upperSensor.isTouching) {
-        //Good position
-        NSLog(@"Good position");
-        [self.delegate setSat:YES];
-        [self.delegate setSlouched:NO];
-    } else if (!self.lowerSensor.isTouching) {
-        //Up position
-        [self.delegate setSat:NO];
-        [self.delegate setSlouched:NO];
-    } else {
-        NSLog(@"Wrong position");
-        [self.delegate setSat:YES];
-        [self.delegate setSlouched:YES];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.lowerSensor.isTouching && self.upperSensor.isTouching) {
+            //Good position
+            NSLog(@"Good position");
+            [self.delegate setSat:YES];
+            [self.delegate setSlouched:NO];
+        } else if (!self.lowerSensor.isTouching) {
+            //Up position
+            [self.delegate setSat:NO];
+            [self.delegate setSlouched:NO];
+        } else {
+            NSLog(@"Wrong position");
+            [self.delegate setSat:YES];
+            [self.delegate setSlouched:YES];
+        }
+    });
 }
 
 - (instancetype)init {

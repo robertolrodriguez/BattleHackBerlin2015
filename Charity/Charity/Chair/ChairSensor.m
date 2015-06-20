@@ -36,7 +36,7 @@ const NSUInteger JSTValuesRangeDifferentialThreshold  = 1;
         [self.irSensor configureWithValue:JSTSensorIRTemperatureEnabled];
         self.irSensor.sensorDelegate = self;
         [self.irSensor setNotificationsEnabled:YES];
-        [self.irSensor setPeriodValue:5];
+        [self.irSensor setPeriodValue:10];
 
         
         self.values = [NSMutableArray arrayWithCapacity:JSTValuesRange];
