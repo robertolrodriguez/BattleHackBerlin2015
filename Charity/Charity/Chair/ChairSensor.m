@@ -9,21 +9,38 @@
 #import "ChairSensor.h"
 #import "JSTBaseSensor.h"
 #import "JSTKeysSensor.h"
+#import "JSTIRSensor.h"
 
 @interface ChairSensor ()<JSTBaseSensorDelegate>
 @property(nonatomic, strong) JSTKeysSensor *sensorKeys;
+@property(nonatomic, strong) JSTIRSensor *irSensor;
+@property (nonatomic, strong) NSMutableArray *values;
+@property (nonatomic, strong) NSNumber *lastAverage;
+
 @end
+
+const NSUInteger JSTValuesRange  = 5; // 0,1s/value
+const NSUInteger JSTValuesRangeDifferentialThreshold  = 1;
 
 @implementation ChairSensor
 
-- (instancetype)initWithKeysSensor:(JSTKeysSensor *)keysSensor {
+- (instancetype)initWithKeysSensor:(JSTKeysSensor *)keysSensor irSensor:(JSTIRSensor *)irSensor{
     self = [self init];
     
     if (self) {
-        self.sensorKeys = keysSensor;
-        self.sensorKeys.sensorDelegate = self;
-        [self.sensorKeys setNotificationsEnabled:YES];
+//        self.sensorKeys = keysSensor;
+//        self.sensorKeys.sensorDelegate = self;
+//        [self.sensorKeys setNotificationsEnabled:YES];
 
+        self.irSensor = irSensor;
+        [self.irSensor configureWithValue:JSTSensorIRTemperatureEnabled];
+        self.irSensor.sensorDelegate = self;
+        [self.irSensor setNotificationsEnabled:YES];
+        [self.irSensor setPeriodValue:10];
+
+        
+        self.values = [NSMutableArray arrayWithCapacity:JSTValuesRange];
+        
     }
     return self;
 }
@@ -43,6 +60,37 @@
                 self.isTouching = NO;
                 [self.chairSensorDelegate isTouching:self.isTouching sensor:self];
         }
+    } else if ([sensor isKindOfClass:[JSTIRSensor class]]) {
+        JSTIRSensor *irSensor = (JSTIRSensor *) sensor;
+        [self.values addObject:@(irSensor.objectTemperature)];
+        [self estimateValues];
+    }
+}
+
+- (void)estimateValues {
+    if (self.values.count == JSTValuesRange) {
+        NSNumber *average = [self.values valueForKeyPath:@"@avg.self"];
+        [self.values removeAllObjects];
+        if (self.lastAverage) {
+            if ( fabsf (self.lastAverage.floatValue  - average.floatValue ) > 5.f ) {
+                if (self.lastAverage.floatValue < average.floatValue) {
+                    NSLog(@"IR DOWN");
+                    if (!self.isTouching) {
+                        self.isTouching = YES;
+                        [self.chairSensorDelegate isTouching:self.isTouching sensor:self];
+                    }
+                } else {
+                    if (self.isTouching) {
+                        self.isTouching = NO;
+                        [self.chairSensorDelegate isTouching:self.isTouching sensor:self];
+                    }
+
+                    NSLog(@"IR UP");
+                }
+            }
+        }
+        self.lastAverage = average;
+
     }
 }
 
