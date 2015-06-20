@@ -27,6 +27,7 @@
 		1725B0191B359D800093E139 /* JSTPressureSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B00B1B359D800093E139 /* JSTPressureSensor.m */; };
 		1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1725B01A1B359DB10093E139 /* CoreBluetooth.framework */; };
 		1725B0201B35A6130093E139 /* ChairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B01F1B35A6130093E139 /* ChairModel.m */; };
+		17DF90A21B35B76300BEF210 /* ChairSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DF90A11B35B76300BEF210 /* ChairSensor.m */; };
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
 		CF6399211B35B4050067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991A1B35B4050067A460 /* ChairController.m */; };
 		CF6399221B35B4050067A460 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991D1B35B4050067A460 /* ViewController.m */; };
@@ -84,6 +85,8 @@
 		1725B01A1B359DB10093E139 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		1725B01E1B35A6130093E139 /* ChairModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChairModel.h; path = Charity/Chair/ChairModel.h; sourceTree = "<group>"; };
 		1725B01F1B35A6130093E139 /* ChairModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChairModel.m; path = Charity/Chair/ChairModel.m; sourceTree = "<group>"; };
+		17DF90A01B35B76300BEF210 /* ChairSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChairSensor.h; path = Charity/Chair/ChairSensor.h; sourceTree = "<group>"; };
+		17DF90A11B35B76300BEF210 /* ChairSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChairSensor.m; path = Charity/Chair/ChairSensor.m; sourceTree = "<group>"; };
 		36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
 		CF6399191B35B4050067A460 /* ChairController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairController.h; sourceTree = "<group>"; };
 		CF63991A1B35B4050067A460 /* ChairController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChairController.m; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 		1725B01D1B35A5E00093E139 /* Chair */ = {
 			isa = PBXGroup;
 			children = (
+				17DF90A01B35B76300BEF210 /* ChairSensor.h */,
+				17DF90A11B35B76300BEF210 /* ChairSensor.m */,
 				1725B01E1B35A6130093E139 /* ChairModel.h */,
 				1725B01F1B35A6130093E139 /* ChairModel.m */,
 			);
@@ -430,6 +435,7 @@
 				1725AFD21B3591940093E139 /* AppDelegate.m in Sources */,
 				F5FD2E3D1B35B21D00E71C40 /* TimerView.m in Sources */,
 				CF6399231B35B4050067A460 /* BalanceView.m in Sources */,
+				17DF90A21B35B76300BEF210 /* ChairSensor.m in Sources */,
 				1725B0111B359D800093E139 /* JSTSensorTag.m in Sources */,
 				1725B0131B359D800093E139 /* JSTBaseSensor.m in Sources */,
 				1725B0201B35A6130093E139 /* ChairModel.m in Sources */,
