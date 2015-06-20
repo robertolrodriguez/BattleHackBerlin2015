@@ -1,10 +1,13 @@
 PODS:
+  - KAProgressLabel (3.2)
   - PayPal-iOS-SDK (2.11.0)
 
 DEPENDENCIES:
+  - KAProgressLabel
   - PayPal-iOS-SDK
 
 SPEC CHECKSUMS:
+  KAProgressLabel: 4362a1d37c5a7bc7c10cd059fd2da7cb9599cb50
   PayPal-iOS-SDK: 5b907042104148cf7f4d89962dee32cee3a6d10e
 
 COCOAPODS: 0.37.2
