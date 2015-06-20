@@ -17,6 +17,7 @@
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
 		CF6399161B35A5720067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6399151B35A5720067A460 /* ChairController.m */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
+		F51BF9371B35A55E001CCDB9 /* BalanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9361B35A55E001CCDB9 /* BalanceView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
 		F51BF9331B3592FF001CCDB9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
+		F51BF9351B35A55E001CCDB9 /* BalanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceView.h; sourceTree = "<group>"; };
+		F51BF9361B35A55E001CCDB9 /* BalanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				1725AFCC1B3591940093E139 /* Supporting Files */,
 				F51BF9321B3592FF001CCDB9 /* Bank.h */,
 				F51BF9331B3592FF001CCDB9 /* Bank.m */,
+				F51BF9351B35A55E001CCDB9 /* BalanceView.h */,
+				F51BF9361B35A55E001CCDB9 /* BalanceView.m */,
 				CF6399141B35A5720067A460 /* ChairController.h */,
 				CF6399151B35A5720067A460 /* ChairController.m */,
 			);
@@ -288,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51BF9371B35A55E001CCDB9 /* BalanceView.m in Sources */,
 				1725AFD51B3591940093E139 /* ViewController.m in Sources */,
 				F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */,
 				1725AFD21B3591940093E139 /* AppDelegate.m in Sources */,

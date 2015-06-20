@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4OL-2c-gnC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4OL-2c-gnC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Dashboard-->
@@ -18,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.44999999999999962" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="silhuette" translatesAutoresizingMaskIntoConstraints="NO" id="v17-ia-dZo">
-                                <rect key="frame" x="243" y="44" width="115" height="196"/>
+                                <rect key="frame" x="243" y="94" width="115" height="196"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="196" id="a2X-A5-2Kc"/>
                                     <constraint firstAttribute="width" constant="115" id="cAd-te-fGx"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGm-4S-fVG" customClass="KAProgressLabel">
-                                <rect key="frame" x="374" y="44" width="60" height="60"/>
+                                <rect key="frame" x="374" y="94" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KHU-fy-1h3"/>
                                     <constraint firstAttribute="width" constant="60" id="u6E-oA-XkI"/>
@@ -35,16 +34,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sedentary time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-o3-9L8">
-                                <rect key="frame" x="143" y="137" width="92" height="60"/>
+                                <rect key="frame" x="143" y="187" width="92" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="vWY-ex-58p"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                <color key="textColor" red="0.93333333730000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-r2-Lve" customClass="KAProgressLabel">
-                                <rect key="frame" x="374" y="137" width="60" height="60"/>
+                                <rect key="frame" x="374" y="187" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="be7-83-mBw"/>
@@ -55,33 +54,42 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slouch time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPm-Y4-FX7">
-                                <rect key="frame" x="163" y="44" width="72" height="60"/>
+                                <rect key="frame" x="163" y="94" width="72" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="p2R-wm-g91"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                <color key="textColor" red="0.56078431370000004" green="1" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-du-wmA" customClass="BalanceView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="l3Y-dy-lJR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cjS-du-wmA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AlM-Yx-smc"/>
                             <constraint firstAttribute="centerX" secondItem="v17-ia-dZo" secondAttribute="centerX" id="GKz-zx-uTq"/>
                             <constraint firstItem="HGm-4S-fVG" firstAttribute="top" secondItem="v17-ia-dZo" secondAttribute="top" id="GqR-86-Dz3"/>
                             <constraint firstItem="HGm-4S-fVG" firstAttribute="leading" secondItem="v17-ia-dZo" secondAttribute="trailing" constant="16" id="J0f-3Y-hWU"/>
                             <constraint firstItem="v17-ia-dZo" firstAttribute="leading" secondItem="6aI-o3-9L8" secondAttribute="trailing" constant="8" id="Mvx-gx-yuc"/>
+                            <constraint firstItem="cjS-du-wmA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PDK-19-BaC"/>
+                            <constraint firstAttribute="trailing" secondItem="cjS-du-wmA" secondAttribute="trailing" id="PLS-YR-ZL6"/>
                             <constraint firstItem="xPm-Y4-FX7" firstAttribute="baseline" secondItem="HGm-4S-fVG" secondAttribute="baseline" id="RAN-Zk-ZvH"/>
+                            <constraint firstItem="v17-ia-dZo" firstAttribute="top" secondItem="cjS-du-wmA" secondAttribute="bottom" constant="44" id="TBc-Qw-R5E"/>
                             <constraint firstItem="1LB-r2-Lve" firstAttribute="bottom" secondItem="v17-ia-dZo" secondAttribute="bottom" constant="-43" id="ZNs-nH-4FU"/>
                             <constraint firstItem="1LB-r2-Lve" firstAttribute="leading" secondItem="v17-ia-dZo" secondAttribute="trailing" constant="16" id="eNn-9T-3lK"/>
-                            <constraint firstItem="v17-ia-dZo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="f74-nD-Hpi"/>
-                            <constraint firstItem="6aI-o3-9L8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="l9p-ni-8t2"/>
                             <constraint firstItem="v17-ia-dZo" firstAttribute="leading" secondItem="xPm-Y4-FX7" secondAttribute="trailing" constant="8" id="pK6-tZ-VYF"/>
                             <constraint firstItem="6aI-o3-9L8" firstAttribute="baseline" secondItem="1LB-r2-Lve" secondAttribute="baseline" id="rUN-OR-age"/>
-                            <constraint firstItem="xPm-Y4-FX7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wGU-Zg-zTH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="pgw-J2-3tX"/>
                     <connections>
+                        <outlet property="balanceView" destination="cjS-du-wmA" id="cSi-uw-U7s"/>
                         <outlet property="progressLabelBadPositionTime" destination="HGm-4S-fVG" id="JOP-EL-YRq"/>
                         <outlet property="progressLabelSedentaryTime" destination="1LB-r2-Lve" id="BXx-fq-q6B"/>
                     </connections>

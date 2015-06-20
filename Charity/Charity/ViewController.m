@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Bank.h"
 #import <KAProgressLabel/KAProgressLabel.h>
+#import "BalanceView.h"
 #import "ChairController.h"
 
 @interface ViewController () <BankDelegate>
@@ -16,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
+@property (weak, nonatomic) IBOutlet BalanceView *balanceView;
 
 @property (nonatomic, strong) ChairController *chairController;
 
@@ -35,11 +37,19 @@
                                                    acceptableSedentaryTime:20.0f
                                                       acceptableSlouchTime:5.0f];
 
+    [self setUpCirculars];
+    [self.balanceView updateBalance:self.bank.balance];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     [self.bank authorize];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+        [self.bank charge];
+    });
 }
 
 - (void)setSedentaryTime:(NSTimeInterval)time {
@@ -49,6 +59,7 @@
 - (void)balanceDidChange {
 
 
+    [self.balanceView updateBalance:self.bank.balance];
 }
 - (void)paypalDidAuthorize {
 
