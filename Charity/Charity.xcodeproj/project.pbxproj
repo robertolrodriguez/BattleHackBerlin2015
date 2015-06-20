@@ -99,8 +99,6 @@
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
 		F51BF9331B3592FF001CCDB9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
-		F51BF9351B35A55E001CCDB9 /* BalanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceView.h; sourceTree = "<group>"; };
-		F51BF9361B35A55E001CCDB9 /* BalanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceView.m; sourceTree = "<group>"; };
 		F5FD2E3B1B35B21D00E71C40 /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
 		F5FD2E3C1B35B21D00E71C40 /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,8 +168,6 @@
 				1725AFCC1B3591940093E139 /* Supporting Files */,
 				F51BF9321B3592FF001CCDB9 /* Bank.h */,
 				F51BF9331B3592FF001CCDB9 /* Bank.m */,
-				F51BF9351B35A55E001CCDB9 /* BalanceView.h */,
-				F51BF9361B35A55E001CCDB9 /* BalanceView.m */,
 				F5FD2E3B1B35B21D00E71C40 /* TimerView.h */,
 				F5FD2E3C1B35B21D00E71C40 /* TimerView.m */,
 			);
