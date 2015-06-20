@@ -32,6 +32,7 @@
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
 		CF6399211B35B4050067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991A1B35B4050067A460 /* ChairController.m */; };
 		CF6399221B35B4050067A460 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991D1B35B4050067A460 /* ViewController.m */; };
+		CF6399281B360A210067A460 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6399271B360A210067A460 /* AudioToolbox.framework */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
 		F5FD2E3D1B35B21D00E71C40 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E3C1B35B21D00E71C40 /* TimerViewController.m */; };
 		F5FD2E421B35F3A000E71C40 /* BreakView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E411B35F3A000E71C40 /* BreakView.m */; };
@@ -98,6 +99,7 @@
 		CF63991D1B35B4050067A460 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF6399251B35B4230067A460 /* ChairProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairProtocol.h; sourceTree = "<group>"; };
 		CF6399261B35C2B00067A460 /* ChairControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairControllerDelegate.h; sourceTree = "<group>"; };
+		CF6399271B360A210067A460 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6399281B360A210067A460 /* AudioToolbox.framework in Frameworks */,
 				1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */,
 				A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */,
 			);
@@ -132,6 +135,7 @@
 		00898C34FFB7D1DE1ED44120 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF6399271B360A210067A460 /* AudioToolbox.framework */,
 				1725B01A1B359DB10093E139 /* CoreBluetooth.framework */,
 				F1704AB9679B177506A47A7E /* libPods-Charity.a */,
 			);
