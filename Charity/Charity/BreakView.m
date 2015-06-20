@@ -49,7 +49,7 @@
 
 
 - (void)slouchTimerStart:(BOOL)start {
-
+    [self slouchTick:nil];
 
         self.slouchingTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                                target:self
