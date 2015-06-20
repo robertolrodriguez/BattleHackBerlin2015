@@ -27,7 +27,9 @@
 		1725B0181B359D800093E139 /* JSTMagnetometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B0091B359D800093E139 /* JSTMagnetometerSensor.m */; };
 		1725B0191B359D800093E139 /* JSTPressureSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B00B1B359D800093E139 /* JSTPressureSensor.m */; };
 		1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1725B01A1B359DB10093E139 /* CoreBluetooth.framework */; };
+		1725B0201B35A6130093E139 /* ChairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B01F1B35A6130093E139 /* ChairModel.m */; };
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
+		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,9 +81,13 @@
 		1725B00A1B359D800093E139 /* JSTPressureSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTPressureSensor.h; sourceTree = "<group>"; };
 		1725B00B1B359D800093E139 /* JSTPressureSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTPressureSensor.m; sourceTree = "<group>"; };
 		1725B01A1B359DB10093E139 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1725B01E1B35A6130093E139 /* ChairModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChairModel.h; path = Charity/Chair/ChairModel.h; sourceTree = "<group>"; };
+		1725B01F1B35A6130093E139 /* ChairModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChairModel.m; path = Charity/Chair/ChairModel.m; sourceTree = "<group>"; };
 		36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
 		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
+		F51BF9331B3592FF001CCDB9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 		1725AFC01B3591940093E139 = {
 			isa = PBXGroup;
 			children = (
+				1725B01D1B35A5E00093E139 /* Chair */,
 				1725B00D1B359D800093E139 /* Device */,
 				1725AFCB1B3591940093E139 /* Charity */,
 				1725AFE51B3591940093E139 /* CharityTests */,
@@ -145,6 +152,8 @@
 				1725AFD91B3591940093E139 /* Images.xcassets */,
 				1725AFDB1B3591940093E139 /* LaunchScreen.xib */,
 				1725AFCC1B3591940093E139 /* Supporting Files */,
+				F51BF9321B3592FF001CCDB9 /* Bank.h */,
+				F51BF9331B3592FF001CCDB9 /* Bank.m */,
 			);
 			path = Charity;
 			sourceTree = "<group>";
@@ -213,6 +222,15 @@
 			);
 			name = Device;
 			path = Charity.xcodeproj/../Charity/Device;
+			sourceTree = "<group>";
+		};
+		1725B01D1B35A5E00093E139 /* Chair */ = {
+			isa = PBXGroup;
+			children = (
+				1725B01E1B35A6130093E139 /* ChairModel.h */,
+				1725B01F1B35A6130093E139 /* ChairModel.m */,
+			);
+			name = Chair;
 			sourceTree = "<group>";
 		};
 		F25B727E1E41F6D2336CE8B8 /* Pods */ = {
@@ -366,9 +384,11 @@
 				1725B0181B359D800093E139 /* JSTMagnetometerSensor.m in Sources */,
 				1725AFD51B3591940093E139 /* ViewController.m in Sources */,
 				1725B00E1B359D800093E139 /* CBUUID+StringRepresentation.m in Sources */,
+				F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */,
 				1725AFD21B3591940093E139 /* AppDelegate.m in Sources */,
 				1725B0111B359D800093E139 /* JSTSensorTag.m in Sources */,
 				1725B0131B359D800093E139 /* JSTBaseSensor.m in Sources */,
+				1725B0201B35A6130093E139 /* ChairModel.m in Sources */,
 				1725B0141B359D800093E139 /* JSTGyroscopeSensor.m in Sources */,
 				1725B0171B359D800093E139 /* JSTKeysSensor.m in Sources */,
 				1725AFCF1B3591940093E139 /* main.m in Sources */,
@@ -432,6 +452,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -476,6 +497,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

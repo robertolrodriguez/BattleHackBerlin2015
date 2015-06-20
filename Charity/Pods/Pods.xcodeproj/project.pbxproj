@@ -7,195 +7,406 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87175468025C8C7AC1678859 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264F69B88E5AC7D6C3DFBCEB /* Foundation.framework */; };
-		CDACC2BFB1ED16E02D55CF21 /* Pods-Charity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB13E58085474D3355C6AE3 /* Pods-Charity-dummy.m */; };
+		0AC03F66DF776DE877FDB7CB /* TPPropertyAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA2CB707671D91F5D28ACDD /* TPPropertyAnimation.h */; };
+		38909F49B59F9C8C83CD422D /* KAProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBFCC93882FD418EA8E4954 /* KAProgressLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4491C3802743B078A5BEA057 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127C6E3834FC634A387BD22F /* Foundation.framework */; };
+		48ADDA172848D50F520360D7 /* Pods-Charity-KAProgressLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A15A403F3E5B44D7A30EB7 /* Pods-Charity-KAProgressLabel-dummy.m */; };
+		7F1E2190BE70A207D372440F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127C6E3834FC634A387BD22F /* Foundation.framework */; };
+		8E04766DACF8F0EA762D73D4 /* TPPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A45D44372D928B427460CD2 /* TPPropertyAnimation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9BDDE8661DB44E670604D99B /* KAProgressLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B82C29AC4633B00660F531 /* KAProgressLabel.h */; };
+		9DA9CADC4F653C0F9A4AA050 /* Pods-Charity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6336050B8F5A2E11A0FF4989 /* Pods-Charity-dummy.m */; };
+		C88BF0559AB506FE4B6909DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3471C9FFEE77A6FC17E38B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8C875B567F1D194FE75A1964 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A46ED9AC3EB07C26703339F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D610DC81179654D9E9E63315;
+			remoteInfo = "Pods-Charity-KAProgressLabel";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		08A0526C7E84BF6845C9C6E8 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = PayPalMobile/CardIOPaymentViewController.h; sourceTree = "<group>"; };
-		1A4733F5AA39C79D9F0C2E63 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = PayPalMobile/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
-		264F69B88E5AC7D6C3DFBCEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3885FE4B2350AF3111B9564B /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = PayPalMobile/CardIOView.h; sourceTree = "<group>"; };
-		4362D1318C4BFEE7B500608D /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
-		4851D299C5E1310738B3820F /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
-		4BE7F296D70CFFEEA569998A /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
-		5D6567A11BEB71C09746C5B6 /* Pods-Charity-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Charity-resources.sh"; sourceTree = "<group>"; };
-		60E57D241567CC93CDE17804 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = PayPalMobile/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
-		6DB13E58085474D3355C6AE3 /* Pods-Charity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Charity-dummy.m"; sourceTree = "<group>"; };
-		728BC86EA13541131000605A /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
-		734857A9A89468CDBDCA5F18 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = PayPalMobile/CardIOViewDelegate.h; sourceTree = "<group>"; };
-		76B45276BF10FEF6ABA68136 /* Pods-Charity-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Charity-environment.h"; sourceTree = "<group>"; };
-		775F1E2F957EAB6E67B0965C /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
-		819FBDC52E730242102E5427 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
-		83D1B11E721A37E5E848CA71 /* Pods-Charity-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Charity-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8A54C72D457655B19191C2C4 /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F2DEE694EB15B45CBD91431 /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = PayPalMobile/CardIOUtilities.h; sourceTree = "<group>"; };
-		A23B1A3F44FBAB65919A7647 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3DB12360A56053C08BB11F1 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
-		A4A95F724CA327240262C78D /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
-		B372D6C2A46BC81CDE78B7EC /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = PayPalMobile/CardIODetectionMode.h; sourceTree = "<group>"; };
-		B88132410FEE78A5F0B4B245 /* Pods-Charity-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Charity-acknowledgements.plist"; sourceTree = "<group>"; };
-		C715E25ECCC4CB369A9172B9 /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = PayPalMobile/CardIO.h; sourceTree = "<group>"; };
-		FAFF7EDAB8C551DAF9463A05 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		10B82C29AC4633B00660F531 /* KAProgressLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KAProgressLabel.h; path = KAProgressLabel/KAProgressLabel.h; sourceTree = "<group>"; };
+		127C6E3834FC634A387BD22F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1A45D44372D928B427460CD2 /* TPPropertyAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPPropertyAnimation.m; path = KAProgressLabel/TPPropertyAnimation.m; sourceTree = "<group>"; };
+		20A355D73810F6147C2D1957 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOCreditCardInfo.h; path = PayPalMobile/CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		26688537BFA6FB709723BEFA /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A15A403F3E5B44D7A30EB7 /* Pods-Charity-KAProgressLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Charity-KAProgressLabel-dummy.m"; sourceTree = "<group>"; };
+		2BA58B515D7ED6E96F110833 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
+		389CB0CEFC4C2F242EEDEB39 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		508C1ED2B5DCC0B87F6B706B /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
+		50C3631E95BDABECC9112CB6 /* CardIOView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOView.h; path = PayPalMobile/CardIOView.h; sourceTree = "<group>"; };
+		5EC3569C70AE574BA5CBA238 /* Pods-Charity-KAProgressLabel-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity-KAProgressLabel-Private.xcconfig"; sourceTree = "<group>"; };
+		6336050B8F5A2E11A0FF4989 /* Pods-Charity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Charity-dummy.m"; sourceTree = "<group>"; };
+		6BA2CB707671D91F5D28ACDD /* TPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPPropertyAnimation.h; path = KAProgressLabel/TPPropertyAnimation.h; sourceTree = "<group>"; };
+		6C3471C9FFEE77A6FC17E38B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		7B40E719FF5332F32953754A /* Pods-Charity-KAProgressLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Charity-KAProgressLabel.xcconfig"; sourceTree = "<group>"; };
+		80B15B8593554A4F9BEC977F /* Pods-Charity-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Charity-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8739D600B3BC0821528CB75E /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		8F2B74298DD6872CB6223BED /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewController.h; path = PayPalMobile/CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		8F37D033356429D316A4E7FD /* PayPalConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
+		9192A323315D21797CF0B9BD /* Pods-Charity-KAProgressLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Charity-KAProgressLabel-prefix.pch"; sourceTree = "<group>"; };
+		9F0F0F057091E1D536122EE4 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOPaymentViewControllerDelegate.h; path = PayPalMobile/CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		AB79A7A665769E6431F91059 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOViewDelegate.h; path = PayPalMobile/CardIOViewDelegate.h; sourceTree = "<group>"; };
+		ABDA8945F9688B472FD12A7F /* PayPalMobile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
+		B1F5D2F6EA98114719617A2C /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		B21DFF44F07B81ABA7B81763 /* Pods-Charity-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Charity-resources.sh"; sourceTree = "<group>"; };
+		BDBFCC93882FD418EA8E4954 /* KAProgressLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KAProgressLabel.m; path = KAProgressLabel/KAProgressLabel.m; sourceTree = "<group>"; };
+		C545504EA0D17BED35678F17 /* CardIODetectionMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIODetectionMode.h; path = PayPalMobile/CardIODetectionMode.h; sourceTree = "<group>"; };
+		C58395EB817F18A86CE47AFC /* Pods-Charity-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Charity-acknowledgements.plist"; sourceTree = "<group>"; };
+		CD162BA6B8E37B021F3D0D4E /* libPods-Charity-KAProgressLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity-KAProgressLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1D73E6C95CAC95F0431EBD /* Pods-Charity-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Charity-environment.h"; sourceTree = "<group>"; };
+		D4E12145E43DC30FE33A13C7 /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		D94B14F74857338A67BF97FC /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		E5359D0F6D9665A40132CBA1 /* CardIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIO.h; path = PayPalMobile/CardIO.h; sourceTree = "<group>"; };
+		EA3C212328B7E6424AB2DCD7 /* PayPalPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
+		EEF6E98584386C47FEA87B83 /* CardIOUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CardIOUtilities.h; path = PayPalMobile/CardIOUtilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B8BA754588DC7CA8940281CA /* Frameworks */ = {
+		4B9976681E03E079D9FCF149 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87175468025C8C7AC1678859 /* Foundation.framework in Frameworks */,
+				7F1E2190BE70A207D372440F /* Foundation.framework in Frameworks */,
+				C88BF0559AB506FE4B6909DC /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78546B8967FDE2E9DECEE90D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4491C3802743B078A5BEA057 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D8146B5948EBC7BD062F540 /* Frameworks */ = {
+		03754BD9CBD662CF376D4577 /* Pods-Charity */ = {
 			isa = PBXGroup;
 			children = (
-				9FD8B50BA2278F229D35D6BF /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		41FE967E4DA52D0C2C2BD204 /* Pods-Charity */ = {
-			isa = PBXGroup;
-			children = (
-				83D1B11E721A37E5E848CA71 /* Pods-Charity-acknowledgements.markdown */,
-				B88132410FEE78A5F0B4B245 /* Pods-Charity-acknowledgements.plist */,
-				6DB13E58085474D3355C6AE3 /* Pods-Charity-dummy.m */,
-				76B45276BF10FEF6ABA68136 /* Pods-Charity-environment.h */,
-				5D6567A11BEB71C09746C5B6 /* Pods-Charity-resources.sh */,
-				819FBDC52E730242102E5427 /* Pods-Charity.debug.xcconfig */,
-				A3DB12360A56053C08BB11F1 /* Pods-Charity.release.xcconfig */,
+				80B15B8593554A4F9BEC977F /* Pods-Charity-acknowledgements.markdown */,
+				C58395EB817F18A86CE47AFC /* Pods-Charity-acknowledgements.plist */,
+				6336050B8F5A2E11A0FF4989 /* Pods-Charity-dummy.m */,
+				CF1D73E6C95CAC95F0431EBD /* Pods-Charity-environment.h */,
+				B21DFF44F07B81ABA7B81763 /* Pods-Charity-resources.sh */,
+				2BA58B515D7ED6E96F110833 /* Pods-Charity.debug.xcconfig */,
+				508C1ED2B5DCC0B87F6B706B /* Pods-Charity.release.xcconfig */,
 			);
 			name = "Pods-Charity";
 			path = "Target Support Files/Pods-Charity";
 			sourceTree = "<group>";
 		};
-		5397B48483C86C7FE67C13A6 = {
+		2C19BD052041E0EE84CCD9D0 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A23B1A3F44FBAB65919A7647 /* Podfile */,
-				2D8146B5948EBC7BD062F540 /* Frameworks */,
-				5B9E6082DC56FB5CB45082EC /* Pods */,
-				F0A0D7ED62D8C87EFA5E2282 /* Products */,
-				A5D63335CC9F65EF8FA47855 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		5B9E6082DC56FB5CB45082EC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B926C3B14CC4959365470679 /* PayPal-iOS-SDK */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9FD8B50BA2278F229D35D6BF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				264F69B88E5AC7D6C3DFBCEB /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		A5D63335CC9F65EF8FA47855 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				41FE967E4DA52D0C2C2BD204 /* Pods-Charity */,
+				03754BD9CBD662CF376D4577 /* Pods-Charity */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B926C3B14CC4959365470679 /* PayPal-iOS-SDK */ = {
+		4AA19980CE4523B4449CFBFA = {
 			isa = PBXGroup;
 			children = (
-				C715E25ECCC4CB369A9172B9 /* CardIO.h */,
-				1A4733F5AA39C79D9F0C2E63 /* CardIOCreditCardInfo.h */,
-				B372D6C2A46BC81CDE78B7EC /* CardIODetectionMode.h */,
-				08A0526C7E84BF6845C9C6E8 /* CardIOPaymentViewController.h */,
-				60E57D241567CC93CDE17804 /* CardIOPaymentViewControllerDelegate.h */,
-				9F2DEE694EB15B45CBD91431 /* CardIOUtilities.h */,
-				3885FE4B2350AF3111B9564B /* CardIOView.h */,
-				734857A9A89468CDBDCA5F18 /* CardIOViewDelegate.h */,
-				4362D1318C4BFEE7B500608D /* PayPalConfiguration.h */,
-				4BE7F296D70CFFEEA569998A /* PayPalFuturePaymentViewController.h */,
-				A4A95F724CA327240262C78D /* PayPalMobile.h */,
-				4851D299C5E1310738B3820F /* PayPalOAuthScopes.h */,
-				728BC86EA13541131000605A /* PayPalPayment.h */,
-				FAFF7EDAB8C551DAF9463A05 /* PayPalPaymentViewController.h */,
-				775F1E2F957EAB6E67B0965C /* PayPalProfileSharingViewController.h */,
+				389CB0CEFC4C2F242EEDEB39 /* Podfile */,
+				4F9DEB435628D5447050B9F3 /* Frameworks */,
+				9D082D6DA329DCA747D4A75E /* Pods */,
+				505EA4FA2A74E63B3283C7A2 /* Products */,
+				2C19BD052041E0EE84CCD9D0 /* Targets Support Files */,
 			);
-			path = "PayPal-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		F0A0D7ED62D8C87EFA5E2282 /* Products */ = {
+		4F9DEB435628D5447050B9F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A54C72D457655B19191C2C4 /* libPods-Charity.a */,
+				FA5DFFBFD8B16D949F0DC24F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		505EA4FA2A74E63B3283C7A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26688537BFA6FB709723BEFA /* libPods-Charity.a */,
+				CD162BA6B8E37B021F3D0D4E /* libPods-Charity-KAProgressLabel.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		85C0DBF122795C4F76A1E0CB /* KAProgressLabel */ = {
+			isa = PBXGroup;
+			children = (
+				10B82C29AC4633B00660F531 /* KAProgressLabel.h */,
+				BDBFCC93882FD418EA8E4954 /* KAProgressLabel.m */,
+				6BA2CB707671D91F5D28ACDD /* TPPropertyAnimation.h */,
+				1A45D44372D928B427460CD2 /* TPPropertyAnimation.m */,
+				8B1832D506922B53AE77DD7D /* Support Files */,
+			);
+			path = KAProgressLabel;
+			sourceTree = "<group>";
+		};
+		8B1832D506922B53AE77DD7D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B40E719FF5332F32953754A /* Pods-Charity-KAProgressLabel.xcconfig */,
+				5EC3569C70AE574BA5CBA238 /* Pods-Charity-KAProgressLabel-Private.xcconfig */,
+				29A15A403F3E5B44D7A30EB7 /* Pods-Charity-KAProgressLabel-dummy.m */,
+				9192A323315D21797CF0B9BD /* Pods-Charity-KAProgressLabel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Charity-KAProgressLabel";
+			sourceTree = "<group>";
+		};
+		9D082D6DA329DCA747D4A75E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85C0DBF122795C4F76A1E0CB /* KAProgressLabel */,
+				C202FA83C2867135B5E87784 /* PayPal-iOS-SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C202FA83C2867135B5E87784 /* PayPal-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				E5359D0F6D9665A40132CBA1 /* CardIO.h */,
+				20A355D73810F6147C2D1957 /* CardIOCreditCardInfo.h */,
+				C545504EA0D17BED35678F17 /* CardIODetectionMode.h */,
+				8F2B74298DD6872CB6223BED /* CardIOPaymentViewController.h */,
+				9F0F0F057091E1D536122EE4 /* CardIOPaymentViewControllerDelegate.h */,
+				EEF6E98584386C47FEA87B83 /* CardIOUtilities.h */,
+				50C3631E95BDABECC9112CB6 /* CardIOView.h */,
+				AB79A7A665769E6431F91059 /* CardIOViewDelegate.h */,
+				8F37D033356429D316A4E7FD /* PayPalConfiguration.h */,
+				B1F5D2F6EA98114719617A2C /* PayPalFuturePaymentViewController.h */,
+				ABDA8945F9688B472FD12A7F /* PayPalMobile.h */,
+				D4E12145E43DC30FE33A13C7 /* PayPalOAuthScopes.h */,
+				EA3C212328B7E6424AB2DCD7 /* PayPalPayment.h */,
+				8739D600B3BC0821528CB75E /* PayPalPaymentViewController.h */,
+				D94B14F74857338A67BF97FC /* PayPalProfileSharingViewController.h */,
+			);
+			path = "PayPal-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		FA5DFFBFD8B16D949F0DC24F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				127C6E3834FC634A387BD22F /* Foundation.framework */,
+				6C3471C9FFEE77A6FC17E38B /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B5BF2222C0C611F006D77850 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BDDE8661DB44E670604D99B /* KAProgressLabel.h in Headers */,
+				0AC03F66DF776DE877FDB7CB /* TPPropertyAnimation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		E571BEA48C1A486C73FB2AD6 /* Pods-Charity */ = {
+		AE98B33DF732D281F87AF9D3 /* Pods-Charity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C8C2E5CB4BF7377733E390E /* Build configuration list for PBXNativeTarget "Pods-Charity" */;
+			buildConfigurationList = 0D27C8056D1E27E491DBA21D /* Build configuration list for PBXNativeTarget "Pods-Charity" */;
 			buildPhases = (
-				976A03BA0627E1B429EC1D9F /* Sources */,
-				B8BA754588DC7CA8940281CA /* Frameworks */,
+				F48AE761F9E22A6962D7658C /* Sources */,
+				78546B8967FDE2E9DECEE90D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9715BA80D670E72E9BE958F4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Charity";
+			productName = "Pods-Charity";
+			productReference = 26688537BFA6FB709723BEFA /* libPods-Charity.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D610DC81179654D9E9E63315 /* Pods-Charity-KAProgressLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E32A7033D7A1AFA1AE2C9CE /* Build configuration list for PBXNativeTarget "Pods-Charity-KAProgressLabel" */;
+			buildPhases = (
+				DA5E3C78DC761DEE7C3CA9A0 /* Sources */,
+				4B9976681E03E079D9FCF149 /* Frameworks */,
+				B5BF2222C0C611F006D77850 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Charity";
-			productName = "Pods-Charity";
-			productReference = 8A54C72D457655B19191C2C4 /* libPods-Charity.a */;
+			name = "Pods-Charity-KAProgressLabel";
+			productName = "Pods-Charity-KAProgressLabel";
+			productReference = CD162BA6B8E37B021F3D0D4E /* libPods-Charity-KAProgressLabel.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AFDD6A044DDB5BC51A25E602 /* Project object */ = {
+		7A46ED9AC3EB07C26703339F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = BA62650F7D9A076FF0262743 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 11EDEAA7A89F9A11AF228F44 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5397B48483C86C7FE67C13A6;
-			productRefGroup = F0A0D7ED62D8C87EFA5E2282 /* Products */;
+			mainGroup = 4AA19980CE4523B4449CFBFA;
+			productRefGroup = 505EA4FA2A74E63B3283C7A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E571BEA48C1A486C73FB2AD6 /* Pods-Charity */,
+				AE98B33DF732D281F87AF9D3 /* Pods-Charity */,
+				D610DC81179654D9E9E63315 /* Pods-Charity-KAProgressLabel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		976A03BA0627E1B429EC1D9F /* Sources */ = {
+		DA5E3C78DC761DEE7C3CA9A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDACC2BFB1ED16E02D55CF21 /* Pods-Charity-dummy.m in Sources */,
+				38909F49B59F9C8C83CD422D /* KAProgressLabel.m in Sources */,
+				48ADDA172848D50F520360D7 /* Pods-Charity-KAProgressLabel-dummy.m in Sources */,
+				8E04766DACF8F0EA762D73D4 /* TPPropertyAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48AE761F9E22A6962D7658C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA9CADC4F653C0F9A4AA050 /* Pods-Charity-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9715BA80D670E72E9BE958F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Charity-KAProgressLabel";
+			target = D610DC81179654D9E9E63315 /* Pods-Charity-KAProgressLabel */;
+			targetProxy = 8C875B567F1D194FE75A1964 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		3AD25C24228FFA73E89A0D67 /* Debug */ = {
+		13F17D99D64C65554CF738F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508C1ED2B5DCC0B87F6B706B /* Pods-Charity.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		25A2D9CC504EAED86BF526EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA58B515D7ED6E96F110833 /* Pods-Charity.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		60CE655737D753AB2CFBCFD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC3569C70AE574BA5CBA238 /* Pods-Charity-KAProgressLabel-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Charity-KAProgressLabel/Pods-Charity-KAProgressLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6AD23DA4ED77E58555ECAFD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C24BF3D1929C78C9C209C79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC3569C70AE574BA5CBA238 /* Pods-Charity-KAProgressLabel-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Charity-KAProgressLabel/Pods-Charity-KAProgressLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F77D73E5608D3B1F5778EFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,94 +445,37 @@
 			};
 			name = Debug;
 		};
-		5F07F44FF9CA5FA42DBF2469 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 819FBDC52E730242102E5427 /* Pods-Charity.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		8BE08E299EDC32724F57FF2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D4F7635E0CE277DBB88654C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3DB12360A56053C08BB11F1 /* Pods-Charity.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C8C2E5CB4BF7377733E390E /* Build configuration list for PBXNativeTarget "Pods-Charity" */ = {
+		0D27C8056D1E27E491DBA21D /* Build configuration list for PBXNativeTarget "Pods-Charity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5F07F44FF9CA5FA42DBF2469 /* Debug */,
-				D4F7635E0CE277DBB88654C7 /* Release */,
+				25A2D9CC504EAED86BF526EF /* Debug */,
+				13F17D99D64C65554CF738F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA62650F7D9A076FF0262743 /* Build configuration list for PBXProject "Pods" */ = {
+		11EDEAA7A89F9A11AF228F44 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AD25C24228FFA73E89A0D67 /* Debug */,
-				8BE08E299EDC32724F57FF2E /* Release */,
+				F77D73E5608D3B1F5778EFC7 /* Debug */,
+				6AD23DA4ED77E58555ECAFD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E32A7033D7A1AFA1AE2C9CE /* Build configuration list for PBXNativeTarget "Pods-Charity-KAProgressLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60CE655737D753AB2CFBCFD9 /* Debug */,
+				8C24BF3D1929C78C9C209C79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AFDD6A044DDB5BC51A25E602 /* Project object */;
+	rootObject = 7A46ED9AC3EB07C26703339F /* Project object */;
 }

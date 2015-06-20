@@ -19,8 +19,18 @@ NSString *const JSTSensorTagErrorDomain = @"JSTSensorTagErrorDomain";
 @property(nonatomic, strong) NSTimer *watchdogTimer;
 @end
 
-@implementation JSTSensorManager {
+@implementation JSTSensorManager
 
++(instancetype)sharedInstance {
+    static dispatch_once_t once;
+    static id sharedInstance;
+    
+    dispatch_once(&once, ^
+                  {
+                      sharedInstance = [self new];
+                  });
+    
+    return sharedInstance;
 }
 
 - (instancetype)init {

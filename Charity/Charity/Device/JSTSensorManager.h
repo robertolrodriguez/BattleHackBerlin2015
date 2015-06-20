@@ -37,4 +37,7 @@ typedef enum {
 
 - (NSArray *)sensors;
 
++ (instancetype)sharedInstance;
+
+
 @end

@@ -2,7 +2,7 @@
  platform :ios, '6.0'
 
 target 'Charity' do
-
+pod 'KAProgressLabel'
 pod 'PayPal-iOS-SDK'
 end
 
