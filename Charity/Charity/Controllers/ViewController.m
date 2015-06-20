@@ -15,7 +15,7 @@
 #import "ChairModel.h"
 #import "MicrophoneSensor.h"
 
-@interface ViewController () <BankDelegate , ChairControllerDelegate, ConnectionDelegate>
+@interface ViewController () <BankDelegate , ChairControllerDelegate, ConnectionDelegate, MicroPhoneSensorDelegate>
 @property (nonatomic, strong) Bank *bank;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
@@ -38,6 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.microphoneSensor = [[MicrophoneSensor alloc] init];
+    self.microphoneSensor.delegate = self;
     self.bank = [[Bank alloc] initWithViewController:self];
     self.bank.delegate = self;
 
@@ -55,6 +56,15 @@
     self.chairModel = [ChairModel new];
     self.chairModel.delegate = self.chairController;
     self.chairModel.connectionDelegate = self;
+    
+}
+
+-(void)setLoudSoundState {
+
+}
+
+-(void)setNormalSoundState {
+
 }
 
 - (IBAction)sit:(id)sender {
