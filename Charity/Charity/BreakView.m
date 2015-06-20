@@ -90,7 +90,7 @@
 
     [label setProgress:percentage
                 timing:TPPropertyAnimationTimingEaseOut
-              duration:0.3
+              duration:1
                  delay:0.0];
 }
 
