@@ -1,25 +1,118 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4OL-2c-gnC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dashboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.44999999999999962" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="silhuette" translatesAutoresizingMaskIntoConstraints="NO" id="v17-ia-dZo">
+                                <rect key="frame" x="243" y="44" width="115" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="a2X-A5-2Kc"/>
+                                    <constraint firstAttribute="width" constant="115" id="cAd-te-fGx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGm-4S-fVG" customClass="KAProgressLabel">
+                                <rect key="frame" x="374" y="44" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KHU-fy-1h3"/>
+                                    <constraint firstAttribute="width" constant="60" id="u6E-oA-XkI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sedentary time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-o3-9L8">
+                                <rect key="frame" x="143" y="137" width="92" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vWY-ex-58p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-r2-Lve" customClass="KAProgressLabel">
+                                <rect key="frame" x="374" y="137" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="be7-83-mBw"/>
+                                    <constraint firstAttribute="height" constant="60" id="hwy-8u-KcC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slouch time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPm-Y4-FX7">
+                                <rect key="frame" x="163" y="44" width="72" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="p2R-wm-g91"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="v17-ia-dZo" secondAttribute="centerX" id="GKz-zx-uTq"/>
+                            <constraint firstItem="HGm-4S-fVG" firstAttribute="top" secondItem="v17-ia-dZo" secondAttribute="top" id="GqR-86-Dz3"/>
+                            <constraint firstItem="HGm-4S-fVG" firstAttribute="leading" secondItem="v17-ia-dZo" secondAttribute="trailing" constant="16" id="J0f-3Y-hWU"/>
+                            <constraint firstItem="v17-ia-dZo" firstAttribute="leading" secondItem="6aI-o3-9L8" secondAttribute="trailing" constant="8" id="Mvx-gx-yuc"/>
+                            <constraint firstItem="xPm-Y4-FX7" firstAttribute="baseline" secondItem="HGm-4S-fVG" secondAttribute="baseline" id="RAN-Zk-ZvH"/>
+                            <constraint firstItem="1LB-r2-Lve" firstAttribute="bottom" secondItem="v17-ia-dZo" secondAttribute="bottom" constant="-43" id="ZNs-nH-4FU"/>
+                            <constraint firstItem="1LB-r2-Lve" firstAttribute="leading" secondItem="v17-ia-dZo" secondAttribute="trailing" constant="16" id="eNn-9T-3lK"/>
+                            <constraint firstItem="v17-ia-dZo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="f74-nD-Hpi"/>
+                            <constraint firstItem="v17-ia-dZo" firstAttribute="leading" secondItem="xPm-Y4-FX7" secondAttribute="trailing" constant="8" id="pK6-tZ-VYF"/>
+                            <constraint firstItem="6aI-o3-9L8" firstAttribute="baseline" secondItem="1LB-r2-Lve" secondAttribute="baseline" id="rUN-OR-age"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Dashboard" id="pgw-J2-3tX"/>
+                    <connections>
+                        <outlet property="progressLabelBadPositionTime" destination="HGm-4S-fVG" id="JOP-EL-YRq"/>
+                        <outlet property="progressLabelSedentaryTime" destination="1LB-r2-Lve" id="BXx-fq-q6B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1169" y="346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nex-d7-oYp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4OL-2c-gnC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="PPr-d4-NBG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.93333333730000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8ie-yg-Ha1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNV-5Z-1Ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357" y="346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="silhuette" width="115" height="196"/>
+    </resources>
 </document>
