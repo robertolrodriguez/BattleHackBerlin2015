@@ -73,8 +73,9 @@
     [self setLabel:self.progressLabel withTime:self.acceptableSlouchTime - slouchTime percentage:percentage];
 
     if (slouchTime >= self.acceptableSlouchTime) {
-        [self slouchTimerStart:NO];
+        //[self slouchTimerStart:NO];
         _slouchTime = 0.0;
+        [self.slouchingTimer invalidate];
         [self removeFromSuperview];
     }
 }
