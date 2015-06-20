@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ChairModel.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) ChairModel *chairModel;
 @end
 
 @implementation AppDelegate
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.chairModel = [ChairModel new];
     return YES;
 }
 

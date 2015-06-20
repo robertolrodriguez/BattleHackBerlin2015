@@ -14,6 +14,20 @@
 		1725AFDA1B3591940093E139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1725AFD91B3591940093E139 /* Images.xcassets */; };
 		1725AFDD1B3591940093E139 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1725AFDB1B3591940093E139 /* LaunchScreen.xib */; };
 		1725AFE91B3591940093E139 /* CharityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFE81B3591940093E139 /* CharityTests.m */; };
+		1725B00E1B359D800093E139 /* CBUUID+StringRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFF51B359D800093E139 /* CBUUID+StringRepresentation.m */; };
+		1725B00F1B359D800093E139 /* JSTSensorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFF71B359D800093E139 /* JSTSensorConstants.m */; };
+		1725B0101B359D800093E139 /* JSTSensorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFF91B359D800093E139 /* JSTSensorManager.m */; };
+		1725B0111B359D800093E139 /* JSTSensorTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFFB1B359D800093E139 /* JSTSensorTag.m */; };
+		1725B0121B359D800093E139 /* JSTAccelerometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFFD1B359D800093E139 /* JSTAccelerometerSensor.m */; };
+		1725B0131B359D800093E139 /* JSTBaseSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725AFFF1B359D800093E139 /* JSTBaseSensor.m */; };
+		1725B0141B359D800093E139 /* JSTGyroscopeSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B0011B359D800093E139 /* JSTGyroscopeSensor.m */; };
+		1725B0151B359D800093E139 /* JSTHumiditySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B0031B359D800093E139 /* JSTHumiditySensor.m */; };
+		1725B0161B359D800093E139 /* JSTIRSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B0051B359D800093E139 /* JSTIRSensor.m */; };
+		1725B0171B359D800093E139 /* JSTKeysSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B0071B359D800093E139 /* JSTKeysSensor.m */; };
+		1725B0181B359D800093E139 /* JSTMagnetometerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B0091B359D800093E139 /* JSTMagnetometerSensor.m */; };
+		1725B0191B359D800093E139 /* JSTPressureSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B00B1B359D800093E139 /* JSTPressureSensor.m */; };
+		1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1725B01A1B359DB10093E139 /* CoreBluetooth.framework */; };
+		1725B0201B35A6130093E139 /* ChairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B01F1B35A6130093E139 /* ChairModel.m */; };
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
 		CF6399161B35A5720067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6399151B35A5720067A460 /* ChairController.m */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
@@ -44,6 +58,33 @@
 		1725AFE21B3591940093E139 /* CharityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1725AFE71B3591940093E139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1725AFE81B3591940093E139 /* CharityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharityTests.m; sourceTree = "<group>"; };
+		1725AFF41B359D800093E139 /* CBUUID+StringRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringRepresentation.h"; sourceTree = "<group>"; };
+		1725AFF51B359D800093E139 /* CBUUID+StringRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringRepresentation.m"; sourceTree = "<group>"; };
+		1725AFF61B359D800093E139 /* JSTSensorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTSensorConstants.h; sourceTree = "<group>"; };
+		1725AFF71B359D800093E139 /* JSTSensorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTSensorConstants.m; sourceTree = "<group>"; };
+		1725AFF81B359D800093E139 /* JSTSensorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTSensorManager.h; sourceTree = "<group>"; };
+		1725AFF91B359D800093E139 /* JSTSensorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTSensorManager.m; sourceTree = "<group>"; };
+		1725AFFA1B359D800093E139 /* JSTSensorTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTSensorTag.h; sourceTree = "<group>"; };
+		1725AFFB1B359D800093E139 /* JSTSensorTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTSensorTag.m; sourceTree = "<group>"; };
+		1725AFFC1B359D800093E139 /* JSTAccelerometerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTAccelerometerSensor.h; sourceTree = "<group>"; };
+		1725AFFD1B359D800093E139 /* JSTAccelerometerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTAccelerometerSensor.m; sourceTree = "<group>"; };
+		1725AFFE1B359D800093E139 /* JSTBaseSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTBaseSensor.h; sourceTree = "<group>"; };
+		1725AFFF1B359D800093E139 /* JSTBaseSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTBaseSensor.m; sourceTree = "<group>"; };
+		1725B0001B359D800093E139 /* JSTGyroscopeSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTGyroscopeSensor.h; sourceTree = "<group>"; };
+		1725B0011B359D800093E139 /* JSTGyroscopeSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTGyroscopeSensor.m; sourceTree = "<group>"; };
+		1725B0021B359D800093E139 /* JSTHumiditySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTHumiditySensor.h; sourceTree = "<group>"; };
+		1725B0031B359D800093E139 /* JSTHumiditySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTHumiditySensor.m; sourceTree = "<group>"; };
+		1725B0041B359D800093E139 /* JSTIRSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTIRSensor.h; sourceTree = "<group>"; };
+		1725B0051B359D800093E139 /* JSTIRSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTIRSensor.m; sourceTree = "<group>"; };
+		1725B0061B359D800093E139 /* JSTKeysSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTKeysSensor.h; sourceTree = "<group>"; };
+		1725B0071B359D800093E139 /* JSTKeysSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTKeysSensor.m; sourceTree = "<group>"; };
+		1725B0081B359D800093E139 /* JSTMagnetometerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTMagnetometerSensor.h; sourceTree = "<group>"; };
+		1725B0091B359D800093E139 /* JSTMagnetometerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTMagnetometerSensor.m; sourceTree = "<group>"; };
+		1725B00A1B359D800093E139 /* JSTPressureSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTPressureSensor.h; sourceTree = "<group>"; };
+		1725B00B1B359D800093E139 /* JSTPressureSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTPressureSensor.m; sourceTree = "<group>"; };
+		1725B01A1B359DB10093E139 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1725B01E1B35A6130093E139 /* ChairModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChairModel.h; path = Charity/Chair/ChairModel.h; sourceTree = "<group>"; };
+		1725B01F1B35A6130093E139 /* ChairModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChairModel.m; path = Charity/Chair/ChairModel.m; sourceTree = "<group>"; };
 		36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
 		CF6399141B35A5720067A460 /* ChairController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairController.h; sourceTree = "<group>"; };
 		CF6399151B35A5720067A460 /* ChairController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChairController.m; sourceTree = "<group>"; };
@@ -61,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */,
 				A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +120,7 @@
 		00898C34FFB7D1DE1ED44120 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1725B01A1B359DB10093E139 /* CoreBluetooth.framework */,
 				F1704AB9679B177506A47A7E /* libPods-Charity.a */,
 			);
 			name = Frameworks;
@@ -86,6 +129,8 @@
 		1725AFC01B3591940093E139 = {
 			isa = PBXGroup;
 			children = (
+				1725B01D1B35A5E00093E139 /* Chair */,
+				1725B00D1B359D800093E139 /* Device */,
 				1725AFCB1B3591940093E139 /* Charity */,
 				1725AFE51B3591940093E139 /* CharityTests */,
 				1725AFCA1B3591940093E139 /* Products */,
@@ -149,6 +194,55 @@
 				1725AFE71B3591940093E139 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1725B00C1B359D800093E139 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				1725AFFC1B359D800093E139 /* JSTAccelerometerSensor.h */,
+				1725AFFD1B359D800093E139 /* JSTAccelerometerSensor.m */,
+				1725AFFE1B359D800093E139 /* JSTBaseSensor.h */,
+				1725AFFF1B359D800093E139 /* JSTBaseSensor.m */,
+				1725B0001B359D800093E139 /* JSTGyroscopeSensor.h */,
+				1725B0011B359D800093E139 /* JSTGyroscopeSensor.m */,
+				1725B0021B359D800093E139 /* JSTHumiditySensor.h */,
+				1725B0031B359D800093E139 /* JSTHumiditySensor.m */,
+				1725B0041B359D800093E139 /* JSTIRSensor.h */,
+				1725B0051B359D800093E139 /* JSTIRSensor.m */,
+				1725B0061B359D800093E139 /* JSTKeysSensor.h */,
+				1725B0071B359D800093E139 /* JSTKeysSensor.m */,
+				1725B0081B359D800093E139 /* JSTMagnetometerSensor.h */,
+				1725B0091B359D800093E139 /* JSTMagnetometerSensor.m */,
+				1725B00A1B359D800093E139 /* JSTPressureSensor.h */,
+				1725B00B1B359D800093E139 /* JSTPressureSensor.m */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		1725B00D1B359D800093E139 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				1725AFF41B359D800093E139 /* CBUUID+StringRepresentation.h */,
+				1725AFF51B359D800093E139 /* CBUUID+StringRepresentation.m */,
+				1725AFF61B359D800093E139 /* JSTSensorConstants.h */,
+				1725AFF71B359D800093E139 /* JSTSensorConstants.m */,
+				1725AFF81B359D800093E139 /* JSTSensorManager.h */,
+				1725AFF91B359D800093E139 /* JSTSensorManager.m */,
+				1725AFFA1B359D800093E139 /* JSTSensorTag.h */,
+				1725AFFB1B359D800093E139 /* JSTSensorTag.m */,
+				1725B00C1B359D800093E139 /* Sensors */,
+			);
+			name = Device;
+			path = Charity.xcodeproj/../Charity/Device;
+			sourceTree = "<group>";
+		};
+		1725B01D1B35A5E00093E139 /* Chair */ = {
+			isa = PBXGroup;
+			children = (
+				1725B01E1B35A6130093E139 /* ChairModel.h */,
+				1725B01F1B35A6130093E139 /* ChairModel.m */,
+			);
+			name = Chair;
 			sourceTree = "<group>";
 		};
 		F25B727E1E41F6D2336CE8B8 /* Pods */ = {
@@ -296,10 +390,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51BF9371B35A55E001CCDB9 /* BalanceView.m in Sources */,
+				1725B00F1B359D800093E139 /* JSTSensorConstants.m in Sources */,
+				1725B0151B359D800093E139 /* JSTHumiditySensor.m in Sources */,
+				1725B0191B359D800093E139 /* JSTPressureSensor.m in Sources */,
+				1725B0121B359D800093E139 /* JSTAccelerometerSensor.m in Sources */,
+				1725B0181B359D800093E139 /* JSTMagnetometerSensor.m in Sources */,
 				1725AFD51B3591940093E139 /* ViewController.m in Sources */,
+				1725B00E1B359D800093E139 /* CBUUID+StringRepresentation.m in Sources */,
 				F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */,
 				1725AFD21B3591940093E139 /* AppDelegate.m in Sources */,
+				1725B0111B359D800093E139 /* JSTSensorTag.m in Sources */,
+				1725B0131B359D800093E139 /* JSTBaseSensor.m in Sources */,
+				1725B0201B35A6130093E139 /* ChairModel.m in Sources */,
+				1725B0141B359D800093E139 /* JSTGyroscopeSensor.m in Sources */,
+				1725B0171B359D800093E139 /* JSTKeysSensor.m in Sources */,
 				1725AFCF1B3591940093E139 /* main.m in Sources */,
+				1725B0161B359D800093E139 /* JSTIRSensor.m in Sources */,
+				1725B0101B359D800093E139 /* JSTSensorManager.m in Sources */,
 				CF6399161B35A5720067A460 /* ChairController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +466,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -403,6 +511,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
