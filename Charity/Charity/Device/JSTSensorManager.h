@@ -26,10 +26,9 @@ typedef enum {
 
 @property (nonatomic, weak) id<JSTSensorManagerDelegate> delegate;
 
-- (void)startScanning;
+- (void)startScanning : (NSArray *)devices;
 - (void)stopScanning;
 - (void)connectSensorWithUUID:(NSUUID *)uuid;
-- (void)connectNearestSensor;
 - (void)connectLastSensor;
 - (BOOL)hasPreviouslyConnectedSensor;
 - (CBCentralManagerState)state;

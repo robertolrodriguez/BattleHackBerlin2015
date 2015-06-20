@@ -1,16 +1,6 @@
-//
-//  AppDelegate.m
-//  Charity
-//
-//  Created by Kamil Pyć on 6/20/15.
-//  Copyright (c) 2015 BattleHack. All rights reserved.
-//
-
 #import "AppDelegate.h"
-#import "ChairModel.h"
 
 @interface AppDelegate ()
-@property (nonatomic, strong) ChairModel *chairModel;
 @end
 
 @implementation AppDelegate
@@ -19,7 +9,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.chairModel = [ChairModel new];
     return YES;
 }
 

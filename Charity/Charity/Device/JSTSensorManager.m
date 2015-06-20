@@ -58,10 +58,10 @@ NSString *const JSTSensorTagErrorDomain = @"JSTSensorTagErrorDomain";
 
 #pragma mark -
 
-- (void)startScanning {
+- (void)startScanning:(NSArray *)devices {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     self.shouldStartScanning = YES;
-    [self scan];
+    [self scan:devices];
 }
 
 - (void)stopScanning {
@@ -108,14 +108,6 @@ NSString *const JSTSensorTagErrorDomain = @"JSTSensorTagErrorDomain";
     self.watchdogTimer = nil;
 }
 
-- (void)connectNearestSensor {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self performSelector:@selector(findNearestAndConnect) withObject:nil afterDelay:10 inModes:@[NSRunLoopCommonModes, NSDefaultRunLoopMode]];
-    });
-    [self startScanning];
-}
-
 - (void)connectLastSensor {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     [self connectSensorWithUUID:[[NSUUID alloc] initWithUUIDString:[[NSUserDefaults standardUserDefaults] objectForKey:kJSTSensorManagerLastDeviceUUID]]];
@@ -137,11 +129,11 @@ NSString *const JSTSensorTagErrorDomain = @"JSTSensorTagErrorDomain";
     }
 }
 
-- (void)scan {
+- (void)scan:(NSArray *)devices {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     if (self.shouldStartScanning && self.centralManager.state == CBCentralManagerStatePoweredOn) {
         self.shouldStartScanning = NO;
-        [self.centralManager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @(YES)}];
+        [self.centralManager scanForPeripheralsWithServices:devices options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @(YES)}];
     }
 }
 
