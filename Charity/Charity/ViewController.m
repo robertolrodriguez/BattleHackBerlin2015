@@ -37,9 +37,7 @@
                                                    acceptableSedentaryTime:20.0f
                                                       acceptableSlouchTime:5.0f];
 
-    [self setUpCirculars];
     [self.balanceView updateBalance:self.bank.balance];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -47,8 +45,8 @@
     [self.bank authorize];
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-
         [self.bank charge];
+        self.chairController.sat = YES;
     });
 }
 

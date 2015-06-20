@@ -20,6 +20,10 @@
 
 @property (nonatomic, assign) NSTimeInterval acceptableSlouchTime;
 @property (nonatomic, assign) NSTimeInterval acceptableSedentaryTime;
+
+@property (nonatomic, strong) NSTimer *sedentaryTimer;
+@property (nonatomic, strong) NSTimer *slouchingTimer;
+
 @end
 
 @implementation ChairController
@@ -39,21 +43,71 @@
         _acceptableSedentaryTime = sedentaryTime;
         _acceptableSlouchTime = slouchTime;
 
-        [self setUpCirculars];
+        [self setUpViews];
     }
 
     return self;
 }
 
+- (void)setSat:(BOOL)sat {
+    if (_sat == sat) {
+        return;
+    }
+
+    _sat = sat;
+
+    [self sedentaryTimerStart:sat];
+}
+
+- (void)setSlouched:(BOOL)slouched {
+    if (_slouched == slouched) {
+        return;
+    }
+
+    _slouched = slouched;
+
+    [self slouchTimerStart:slouched];
+}
+
+
+- (void)sedentaryTimerStart:(BOOL)start {
+
+    if (start) {
+        self.sedentaryTimer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(sedentaryTick) userInfo:nil repeats:YES];
+
+        return;
+    }
+
+    [self.sedentaryTimer invalidate];
+}
+
+- (void)sedentaryTick {
+    self.sedentaryTime += 1.0;
+}
+
 - (void)slouchTimerStart:(BOOL)start {
-    
-}
 
-- (void)setSedentaryTimer:(NSTimeInterval)slouchTimer {
+
 
 }
 
-- (void)setSlouchTimer:(NSTimeInterval)slouchTimer {
+- (void)setSedentaryTime:(NSTimeInterval)sedentaryTime {
+
+    _sedentaryTime = sedentaryTime;
+
+    CGFloat percentage = (CGFloat) (sedentaryTime / self.acceptableSedentaryTime);
+
+    self.progressLabelSedentaryTime.labelVCBlock = ^(KAProgressLabel *label) {
+        label.text = [NSString stringWithFormat:@"%.0f%%", (label.progress * 100)];
+    };
+
+    [self.progressLabelSedentaryTime setProgress:percentage
+                                          timing:TPPropertyAnimationTimingEaseOut
+                                        duration:0.3
+                                           delay:0.0];
+}
+
+- (void)setSlouchTime:(NSTimeInterval)slouchTime {
     self.progressLabelBadPositionTime.labelVCBlock = ^(KAProgressLabel *label) {
         label.text = [NSString stringWithFormat:@"%.0f%%", (label.progress * 100)];
     };
@@ -63,13 +117,12 @@
                                           duration:1.0
                                              delay:5.0];
 
-    [self.progressLabelSedentaryTime setProgress:0.5
-                                          timing:TPPropertyAnimationTimingEaseOut
-                                        duration:1.0
-                                           delay:5.0];
+
 }
 
-- (void)setUpCirculars {
+- (void)setUpViews {
+
+    self.silhuetteImageView.alpha = 0.5f;
 
     self.progressLabelBadPositionTime.fillColor = [UIColor clearColor];
     self.progressLabelBadPositionTime.trackColor = [UIColor colorWithRed:0.149020 green:0.031373 blue:0.062745 alpha:1.0];

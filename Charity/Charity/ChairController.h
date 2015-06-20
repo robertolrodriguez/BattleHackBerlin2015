@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChairProtocol.h"
 
 @class KAProgressLabel;
 
-@interface ChairController : NSObject
+@interface ChairController : NSObject <ChairProtocol>
+
+@property (nonatomic, assign) BOOL sat;
+@property (nonatomic, assign) BOOL slouched;
 
 - (instancetype)initWithSedentaryLabel:(KAProgressLabel *)sedentary
                            slouchLabel:(KAProgressLabel *)slouch
