@@ -9,12 +9,12 @@
 #import "ViewController.h"
 #import "Bank.h"
 #import <KAProgressLabel/KAProgressLabel.h>
-
+#import "ChairControllerDelegate.h"
 #import "ChairController.h"
 #import "TimerViewController.h"
 #import "ChairModel.h"
 
-@interface ViewController () <BankDelegate>
+@interface ViewController () <BankDelegate , ChairControllerDelegate>
 @property (nonatomic, strong) Bank *bank;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
@@ -40,8 +40,8 @@
     self.chairController = [[ChairController alloc] initWithSedentaryLabel:self.progressLabelSedentaryTime
                                                                slouchLabel:self.progressLabelBadPositionTime
                                                             silhuetteImage:self.silhuetteImageView
-                                                   acceptableSedentaryTime:20.0f
-                                                      acceptableSlouchTime:5.0f];
+                                                   acceptableSedentaryTime:60.0 * 1.0
+                                                      acceptableSlouchTime:10.0];
 
 
     [self updateBalance:self.bank.balance];
@@ -55,13 +55,24 @@
     self.balanceLabel.text = [NSString stringWithFormat:@"Current balance: %.2f$", balance];
 }
 
+- (void)slouchingTimeExceeded {
+    [self.bank charge];
+}
+
+- (void)sedentaryTimeExceeded {
+
+}
+
 - (void)viewDidAppear:(BOOL)animated {
 
     [self.bank authorize];
 
+    self.chairController.sat = YES;
+    self.chairController.slouched = YES;
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.bank charge];
-        self.chairController.sat = YES;
+        self.chairController.sat = NO;
     });
 
     static dispatch_once_t onceToken;
@@ -85,10 +96,6 @@
             [self.timerViewController stop];
         });
     });
-}
-
-- (void)setSedentaryTime:(NSTimeInterval)time {
-
 }
 
 - (void)balanceDidChange {
