@@ -11,6 +11,7 @@
 @interface TimerView () {
   NSTimer *timer;
   NSTimeInterval time;
+    UILabel*label;
 }
 @end
 
@@ -23,6 +24,11 @@
                                          selector:@selector(timerDidTick:)
                                          userInfo:nil
                                           repeats:YES];
+    if (!label) {
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        label.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:label];
+    }
 }
 
 - (void)stop {
@@ -40,8 +46,9 @@
   minutes = minutes % 60;
 
     NSString* timeString = [NSString stringWithFormat:@"%.1lu:%.2lu:%.2lu", (unsigned long)hours, (unsigned long)minutes, (unsigned long)seconds];
-
-    NSLog(@"%d", timeString);
+    NSLog(@"%@", timeString);
+    label.text = timeString;
+    [label sizeToFit];
 }
 
 @end

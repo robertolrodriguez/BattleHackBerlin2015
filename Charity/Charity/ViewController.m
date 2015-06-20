@@ -48,8 +48,6 @@
     [self.balanceView updateBalance:self.bank.balance];
 
 
-
-    self.timerView = [[TimerView alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
