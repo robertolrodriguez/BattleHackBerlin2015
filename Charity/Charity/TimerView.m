@@ -28,6 +28,7 @@
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
         label.textAlignment = NSTextAlignmentCenter;
         [self addSubview:label];
+        label.textColor = [UIColor whiteColor];
     }
 }
 

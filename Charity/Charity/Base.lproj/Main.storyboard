@@ -63,16 +63,28 @@
                                 <color key="textColor" red="0.93333333730000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-du-wmA" customClass="BalanceView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-du-wmA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-xS-xbw">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
+                                    <constraint firstItem="kt0-xS-xbw" firstAttribute="leading" secondItem="cjS-du-wmA" secondAttribute="leading" id="Ggz-1A-bMy"/>
+                                    <constraint firstAttribute="bottom" secondItem="kt0-xS-xbw" secondAttribute="bottom" id="QTN-Jr-YVh"/>
+                                    <constraint firstItem="kt0-xS-xbw" firstAttribute="top" secondItem="cjS-du-wmA" secondAttribute="top" id="Ro2-0H-9Ip"/>
                                     <constraint firstAttribute="height" constant="50" id="l3Y-dy-lJR"/>
+                                    <constraint firstAttribute="trailing" secondItem="kt0-xS-xbw" secondAttribute="trailing" id="vOj-W2-Exb"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-f8-nos" customClass="TimerView">
                                 <rect key="frame" x="0.0" y="334" width="600" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="RyD-at-pEh"/>
                                 </constraints>
@@ -102,7 +114,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="pgw-J2-3tX"/>
                     <connections>
-                        <outlet property="balanceView" destination="cjS-du-wmA" id="cSi-uw-U7s"/>
+                        <outlet property="balanceLabel" destination="kt0-xS-xbw" id="b4L-he-yHW"/>
                         <outlet property="progressLabelBadPositionTime" destination="HGm-4S-fVG" id="JOP-EL-YRq"/>
                         <outlet property="progressLabelSedentaryTime" destination="1LB-r2-Lve" id="BXx-fq-q6B"/>
                         <outlet property="silhuetteImageView" destination="v17-ia-dZo" id="G5g-jQ-Axy"/>

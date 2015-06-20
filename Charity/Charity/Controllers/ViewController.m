@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Bank.h"
 #import <KAProgressLabel/KAProgressLabel.h>
-#import "BalanceView.h"
+
 #import "ChairController.h"
 #import "TimerView.h"
 
@@ -18,10 +18,11 @@
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
-@property (weak, nonatomic) IBOutlet BalanceView *balanceView;
+
 @property (weak, nonatomic) IBOutlet TimerView*timerView;
 
 @property (nonatomic, strong) ChairController *chairController;
+@property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
 
 @end
 
@@ -39,7 +40,12 @@
                                                    acceptableSedentaryTime:20.0f
                                                       acceptableSlouchTime:5.0f];
 
-    [self.balanceView updateBalance:self.bank.balance];
+    [self updateBalance:self.bank.balance];
+    
+}
+
+- (void)updateBalance:(CGFloat)balance {
+    self.balanceLabel.text = [NSString stringWithFormat:@"Current balance: %.2f$", balance];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -81,7 +87,7 @@
 - (void)balanceDidChange {
 
 
-    [self.balanceView updateBalance:self.bank.balance];
+    [self updateBalance:self.bank.balance];
 }
 - (void)paypalDidAuthorize {
 
