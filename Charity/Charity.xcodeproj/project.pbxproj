@@ -29,6 +29,7 @@
 		1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1725B01A1B359DB10093E139 /* CoreBluetooth.framework */; };
 		1725B0201B35A6130093E139 /* ChairModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1725B01F1B35A6130093E139 /* ChairModel.m */; };
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
+		CF6399161B35A5720067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6399151B35A5720067A460 /* ChairController.m */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
 		F51BF9371B35A55E001CCDB9 /* BalanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9361B35A55E001CCDB9 /* BalanceView.m */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,9 @@
 		1725B01E1B35A6130093E139 /* ChairModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChairModel.h; path = Charity/Chair/ChairModel.h; sourceTree = "<group>"; };
 		1725B01F1B35A6130093E139 /* ChairModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChairModel.m; path = Charity/Chair/ChairModel.m; sourceTree = "<group>"; };
 		36B4AF9CBBE28A9485C91C97 /* Pods-Charity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.release.xcconfig"; sourceTree = "<group>"; };
+		CF6399141B35A5720067A460 /* ChairController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairController.h; sourceTree = "<group>"; };
+		CF6399151B35A5720067A460 /* ChairController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChairController.m; sourceTree = "<group>"; };
+		CF6399171B35AF580067A460 /* ChairProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairProtocol.h; sourceTree = "<group>"; };
 		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
@@ -159,6 +163,9 @@
 				F51BF9331B3592FF001CCDB9 /* Bank.m */,
 				F51BF9351B35A55E001CCDB9 /* BalanceView.h */,
 				F51BF9361B35A55E001CCDB9 /* BalanceView.m */,
+				CF6399171B35AF580067A460 /* ChairProtocol.h */,
+				CF6399141B35A5720067A460 /* ChairController.h */,
+				CF6399151B35A5720067A460 /* ChairController.m */,
 			);
 			path = Charity;
 			sourceTree = "<group>";
@@ -400,6 +407,7 @@
 				1725AFCF1B3591940093E139 /* main.m in Sources */,
 				1725B0161B359D800093E139 /* JSTIRSensor.m in Sources */,
 				1725B0101B359D800093E139 /* JSTSensorManager.m in Sources */,
+				CF6399161B35A5720067A460 /* ChairController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
