@@ -33,6 +33,8 @@
 		CF6399221B35B4050067A460 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991D1B35B4050067A460 /* ViewController.m */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
 		F5FD2E3D1B35B21D00E71C40 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E3C1B35B21D00E71C40 /* TimerViewController.m */; };
+		F5FD2E421B35F3A000E71C40 /* BreakView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E411B35F3A000E71C40 /* BreakView.m */; };
+		F5FD2E441B35F4D700E71C40 /* BreakView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FD2E431B35F4D700E71C40 /* BreakView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,9 @@
 		F51BF9331B3592FF001CCDB9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
 		F5FD2E3B1B35B21D00E71C40 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		F5FD2E3C1B35B21D00E71C40 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		F5FD2E401B35F3A000E71C40 /* BreakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BreakView.h; path = Charity/BreakView.h; sourceTree = SOURCE_ROOT; };
+		F5FD2E411B35F3A000E71C40 /* BreakView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BreakView.m; path = Charity/BreakView.m; sourceTree = SOURCE_ROOT; };
+		F5FD2E431B35F4D700E71C40 /* BreakView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BreakView.xib; path = Charity/BreakView.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +268,9 @@
 		CF63991E1B35B4050067A460 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5FD2E401B35F3A000E71C40 /* BreakView.h */,
+				F5FD2E411B35F3A000E71C40 /* BreakView.m */,
+				F5FD2E431B35F4D700E71C40 /* BreakView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +377,7 @@
 			files = (
 				1725AFD81B3591940093E139 /* Main.storyboard in Resources */,
 				1725AFDD1B3591940093E139 /* LaunchScreen.xib in Resources */,
+				F5FD2E441B35F4D700E71C40 /* BreakView.xib in Resources */,
 				1725AFDA1B3591940093E139 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +436,7 @@
 				1725B0191B359D800093E139 /* JSTPressureSensor.m in Sources */,
 				1725B0121B359D800093E139 /* JSTAccelerometerSensor.m in Sources */,
 				1725B0181B359D800093E139 /* JSTMagnetometerSensor.m in Sources */,
+				F5FD2E421B35F3A000E71C40 /* BreakView.m in Sources */,
 				1725B00E1B359D800093E139 /* CBUUID+StringRepresentation.m in Sources */,
 				F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */,
 				1725AFD21B3591940093E139 /* AppDelegate.m in Sources */,
