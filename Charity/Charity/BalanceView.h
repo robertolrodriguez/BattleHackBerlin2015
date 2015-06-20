@@ -10,4 +10,6 @@
 
 @interface BalanceView : UIView
 
+- (void)updateBalance:(CGFloat)balance;
+
 @end

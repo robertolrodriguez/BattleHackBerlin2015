@@ -89,6 +89,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="pgw-J2-3tX"/>
                     <connections>
+                        <outlet property="balanceView" destination="cjS-du-wmA" id="cSi-uw-U7s"/>
                         <outlet property="progressLabelBadPositionTime" destination="HGm-4S-fVG" id="JOP-EL-YRq"/>
                         <outlet property="progressLabelSedentaryTime" destination="1LB-r2-Lve" id="BXx-fq-q6B"/>
                     </connections>

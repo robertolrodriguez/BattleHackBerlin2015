@@ -8,14 +8,31 @@
 
 #import "BalanceView.h"
 
+@interface BalanceView ()
+{
+    UILabel *label;
+}
+
+
+@end
+
+
 @implementation BalanceView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+
+    if (self) {
+        label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        [self addSubview:label];
+    }
+
+    return self;
 }
-*/
+
+- (void)updateBalance:(CGFloat)balance {
+    [label setText:[NSString stringWithFormat:@"Current balance: %f $", balance]];
+    [label sizeToFit];
+}
 
 @end

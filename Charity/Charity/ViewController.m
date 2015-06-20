@@ -9,12 +9,15 @@
 #import "ViewController.h"
 #import "Bank.h"
 #import <KAProgressLabel/KAProgressLabel.h>
+#import "BalanceView.h"
 
 @interface ViewController () <BankDelegate>
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
 @property (nonatomic, strong)Bank *bank;
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
+@property (weak, nonatomic) IBOutlet BalanceView *balanceView;
+
 @end
 
 @implementation ViewController
