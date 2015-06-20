@@ -11,6 +11,7 @@
 #import <KAProgressLabel/KAProgressLabel.h>
 #import "BalanceView.h"
 #import "ChairController.h"
+#import "TimerView.h"
 
 @interface ViewController () <BankDelegate>
 @property (nonatomic, strong) Bank *bank;
@@ -18,6 +19,7 @@
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
 @property (weak, nonatomic) IBOutlet BalanceView *balanceView;
+@property (weak, nonatomic) IBOutlet TimerView*timerView;
 
 @property (nonatomic, strong) ChairController *chairController;
 
@@ -47,6 +49,28 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.bank charge];
         self.chairController.sat = YES;
+    });
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView start];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(13 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView stop];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(18 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView start];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView stop];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(26 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView start];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(36 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView stop];
+        });
     });
 }
 
