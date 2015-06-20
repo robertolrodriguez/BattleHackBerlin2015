@@ -10,6 +10,7 @@
 #import "Bank.h"
 #import <KAProgressLabel/KAProgressLabel.h>
 #import "BalanceView.h"
+#import "TimerView.h"
 
 @interface ViewController () <BankDelegate>
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelBadPositionTime;
@@ -17,6 +18,7 @@
 @property (nonatomic, weak) IBOutlet KAProgressLabel *progressLabelSedentaryTime;
 @property (nonatomic, weak) IBOutlet UIImageView *silhuetteImageView;
 @property (weak, nonatomic) IBOutlet BalanceView *balanceView;
+@property (strong, nonatomic) IBOutlet TimerView* timerView;
 
 @end
 
@@ -45,6 +47,9 @@
     [self setUpCirculars];
     [self.balanceView updateBalance:self.bank.balance];
 
+
+
+    self.timerView = [[TimerView alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -55,6 +60,29 @@
 
         [self.bank charge];
     });
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView start];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView stop];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView start];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView stop];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(28 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView start];
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.timerView stop];
+        });
+    });
+
+
 }
 
 - (void)balanceDidChange {

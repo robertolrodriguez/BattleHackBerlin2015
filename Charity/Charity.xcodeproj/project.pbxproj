@@ -31,6 +31,7 @@
 		A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1704AB9679B177506A47A7E /* libPods-Charity.a */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
 		F51BF9371B35A55E001CCDB9 /* BalanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9361B35A55E001CCDB9 /* BalanceView.m */; };
+		F5FD2E3D1B35B21D00E71C40 /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E3C1B35B21D00E71C40 /* TimerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		F51BF9331B3592FF001CCDB9 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
 		F51BF9351B35A55E001CCDB9 /* BalanceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceView.h; sourceTree = "<group>"; };
 		F51BF9361B35A55E001CCDB9 /* BalanceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceView.m; sourceTree = "<group>"; };
+		F5FD2E3B1B35B21D00E71C40 /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
+		F5FD2E3C1B35B21D00E71C40 /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 				F51BF9331B3592FF001CCDB9 /* Bank.m */,
 				F51BF9351B35A55E001CCDB9 /* BalanceView.h */,
 				F51BF9361B35A55E001CCDB9 /* BalanceView.m */,
+				F5FD2E3B1B35B21D00E71C40 /* TimerView.h */,
+				F5FD2E3C1B35B21D00E71C40 /* TimerView.m */,
 			);
 			path = Charity;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				1725B00E1B359D800093E139 /* CBUUID+StringRepresentation.m in Sources */,
 				F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */,
 				1725AFD21B3591940093E139 /* AppDelegate.m in Sources */,
+				F5FD2E3D1B35B21D00E71C40 /* TimerView.m in Sources */,
 				1725B0111B359D800093E139 /* JSTSensorTag.m in Sources */,
 				1725B0131B359D800093E139 /* JSTBaseSensor.m in Sources */,
 				1725B0201B35A6130093E139 /* ChairModel.m in Sources */,
