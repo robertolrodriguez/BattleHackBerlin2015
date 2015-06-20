@@ -45,7 +45,6 @@
 
 
     [self updateBalance:self.bank.balance];
-}
 
     self.chairModel = [ChairModel new];
     self.chairModel.delegate = self.chairController;
@@ -54,17 +53,26 @@
 
 - (void)updateBalance:(CGFloat)balance {
     self.balanceLabel.text = [NSString stringWithFormat:@"Current balance: %.2f$", balance];
+}
+
 - (void)slouchingTimeExceeded {
     [self.bank charge];
+}
+
+- (void)sedentaryTimeExceeded {
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 
     [self.bank authorize];
 
+    self.chairController.sat = YES;
+    self.chairController.slouched = YES;
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.bank charge];
-        self.chairController.sat = YES;
+        self.chairController.sat = NO;
     });
 
     static dispatch_once_t onceToken;
