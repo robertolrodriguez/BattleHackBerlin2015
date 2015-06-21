@@ -43,6 +43,15 @@
 
 @implementation ViewController
 
+
+- (IBAction)showPaypal:(id)sender {
+    [self.bank authorize];
+    
+}
+- (IBAction)reconnect:(id)sender {
+    [self.chairModel reconnect];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
 

@@ -31,4 +31,6 @@ typedef NS_ENUM(NSUInteger, TemperatureState) {
 @property (nonatomic, weak) id <ChairProtocol> delegate;
 @property (nonatomic, weak) id <ConnectionDelegate> connectionDelegate;
 
+- (void)reconnect;
+
 @end

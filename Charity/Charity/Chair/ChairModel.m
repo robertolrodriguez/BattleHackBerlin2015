@@ -117,4 +117,10 @@ NSString *deviceBackID= @"3D561BD7-53FC-FAAA-811C-A4EA4CC401DA";
     [self.connectionDelegate newAmbientTemperature:state];
 }
 
+-(void)reconnect {
+    [self.connectionDelegate newConnectionState:ConnectionStateSearchingForDevice];
+    //[manager startScanning:nil];
+    [self.sensorManager connectSensorWithUUID:[[NSUUID alloc] initWithUUIDString:deviceAssID]];
+}
+
 @end
