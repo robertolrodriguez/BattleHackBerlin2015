@@ -25,7 +25,11 @@
         NSLog(@"SC: No devices found (for example: simulator)");
         return;
     }
-    _myDevice = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo][0];
+    
+    if (_mySesh == nil) _mySesh = [[AVCaptureSession alloc] init];
+    _mySesh.sessionPreset = AVCaptureSessionPresetLow;
+    
+    _myDevice = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo][1];
     
     if ([_myDevice isFlashAvailable] && _myDevice.flashActive && [_myDevice lockForConfiguration:nil]) {
         //NSLog(@"SC: Turning Flash Off ...");
@@ -52,7 +56,7 @@
     [_mySesh startRunning];
     
     
-    self.levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.3 target: self selector: @selector(capturePhoto) userInfo: nil repeats: YES];
+    self.levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(capturePhoto) userInfo: nil repeats: YES];
 
     
 }
@@ -82,7 +86,6 @@
             default:
                 break;
         }
-        
         
     }
     
@@ -144,6 +147,40 @@
 
 
 -(void)analyzeLight:(UIImage *)image {
+    BOOL isDark = isDarkImage (image);
+    [self.delegate setIsDark:isDark];
+}
+
+
+BOOL isDarkImage(UIImage* inputImage){
+    
+    BOOL isDark = FALSE;
+    
+    CFDataRef imageData = CGDataProviderCopyData(CGImageGetDataProvider(inputImage.CGImage));
+    const UInt8 *pixels = CFDataGetBytePtr(imageData);
+    
+    int darkPixels = 0;
+    
+    int length = CFDataGetLength(imageData);
+    int const darkPixelThreshold = (inputImage.size.width*inputImage.size.height)*.75;
+    
+    for(int i=0; i<length; i+=4)
+    {
+        int r = pixels[i];
+        int g = pixels[i+1];
+        int b = pixels[i+2];
+        
+        //luminance calculation gives more weight to r and b for human eyes
+        float luminance = (0.299*r + 0.587*g + 0.114*b);
+        if (luminance<150) darkPixels ++;
+    }
+    
+    if (darkPixels >= darkPixelThreshold)
+        isDark = YES;
+    
+    CFRelease(imageData);
+    
+    return isDark;
     
 }
 

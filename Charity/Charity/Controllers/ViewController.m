@@ -19,7 +19,7 @@
 #import "CameraLightSensor.h"
 
 @interface ViewController () <BankDelegate, ChairControllerDelegate,
-                              ConnectionDelegate, MicroPhoneSensorDelegate>
+                              ConnectionDelegate, MicroPhoneSensorDelegate, CameraLightSensorDelegate>
 @property (nonatomic, strong) Bank *bank;
 @property (nonatomic, strong) TimerViewController *timerViewController;
 @property (nonatomic, strong) ChairModel *chairModel;
@@ -78,6 +78,7 @@
 
     
     self.camera = [CameraLightSensor new];
+    self.camera.delegate = self;
 }
 
 - (IBAction)sit:(id)sender {
@@ -218,5 +219,16 @@
     }
     });
 }
+
+-(void)setIsDark:(BOOL)isDark {
+    if (isDark) {
+        self.lightLevelLabel.text  = @"Bad";
+        self.lightLevelLabel.textColor = [UIColor orangeColor];
+    } else {
+        self.lightLevelLabel.text  = @"Good";
+        self.lightLevelLabel.textColor = [UIColor whiteColor];
+    }
+}
+
 
 @end
