@@ -34,10 +34,15 @@
 		CF6399211B35B4050067A460 /* ChairController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991A1B35B4050067A460 /* ChairController.m */; };
 		CF6399221B35B4050067A460 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63991D1B35B4050067A460 /* ViewController.m */; };
 		CF6399281B360A210067A460 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6399271B360A210067A460 /* AudioToolbox.framework */; };
+		CF63992E1B362C590067A460 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF63992D1B362C590067A460 /* AVFoundation.framework */; };
+		CF6399301B362E510067A460 /* 0899.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF63992F1B362E510067A460 /* 0899.mp3 */; };
+		CF6399321B36317B0067A460 /* 0339.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF6399311B36317B0067A460 /* 0339.mp3 */; };
+		CF6399341B3633DD0067A460 /* 0850.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF6399331B3633DD0067A460 /* 0850.mp3 */; };
 		F51BF9341B3592FF001CCDB9 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF9331B3592FF001CCDB9 /* Bank.m */; };
 		F5FD2E3D1B35B21D00E71C40 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E3C1B35B21D00E71C40 /* TimerViewController.m */; };
 		F5FD2E421B35F3A000E71C40 /* BreakView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E411B35F3A000E71C40 /* BreakView.m */; };
 		F5FD2E441B35F4D700E71C40 /* BreakView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FD2E431B35F4D700E71C40 /* BreakView.xib */; };
+		F5FD2E4D1B36274F00E71C40 /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FD2E4B1B36274F00E71C40 /* Canvas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +108,10 @@
 		CF6399251B35B4230067A460 /* ChairProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairProtocol.h; sourceTree = "<group>"; };
 		CF6399261B35C2B00067A460 /* ChairControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChairControllerDelegate.h; sourceTree = "<group>"; };
 		CF6399271B360A210067A460 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CF63992D1B362C590067A460 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CF63992F1B362E510067A460 /* 0899.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0899.mp3; sourceTree = "<group>"; };
+		CF6399311B36317B0067A460 /* 0339.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0339.mp3; sourceTree = "<group>"; };
+		CF6399331B3633DD0067A460 /* 0850.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0850.mp3; sourceTree = "<group>"; };
 		E2CEC092EC10F56BC686F127 /* Pods-Charity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charity/Pods-Charity.debug.xcconfig"; sourceTree = "<group>"; };
 		F1704AB9679B177506A47A7E /* libPods-Charity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Charity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BF9321B3592FF001CCDB9 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
@@ -112,6 +121,8 @@
 		F5FD2E401B35F3A000E71C40 /* BreakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BreakView.h; path = Charity/BreakView.h; sourceTree = SOURCE_ROOT; };
 		F5FD2E411B35F3A000E71C40 /* BreakView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BreakView.m; path = Charity/BreakView.m; sourceTree = SOURCE_ROOT; };
 		F5FD2E431B35F4D700E71C40 /* BreakView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BreakView.xib; path = Charity/BreakView.xib; sourceTree = SOURCE_ROOT; };
+		F5FD2E4B1B36274F00E71C40 /* Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Canvas.m; path = Charity/Canvas.m; sourceTree = SOURCE_ROOT; };
+		F5FD2E4C1B36274F00E71C40 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Canvas.h; path = Charity/Canvas.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF63992E1B362C590067A460 /* AVFoundation.framework in Frameworks */,
 				CF6399281B360A210067A460 /* AudioToolbox.framework in Frameworks */,
 				1725B01B1B359DB10093E139 /* CoreBluetooth.framework in Frameworks */,
 				A6825D7BC8CCD1B4534239B2 /* libPods-Charity.a in Frameworks */,
@@ -138,6 +150,7 @@
 		00898C34FFB7D1DE1ED44120 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF63992D1B362C590067A460 /* AVFoundation.framework */,
 				CF6399271B360A210067A460 /* AudioToolbox.framework */,
 				1725B01A1B359DB10093E139 /* CoreBluetooth.framework */,
 				F1704AB9679B177506A47A7E /* libPods-Charity.a */,
@@ -190,6 +203,9 @@
 		1725AFCC1B3591940093E139 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF6399331B3633DD0067A460 /* 0850.mp3 */,
+				CF6399311B36317B0067A460 /* 0339.mp3 */,
+				CF63992F1B362E510067A460 /* 0899.mp3 */,
 				1725AFCD1B3591940093E139 /* Info.plist */,
 				1725AFCE1B3591940093E139 /* main.m */,
 			);
@@ -282,6 +298,8 @@
 		CF63991E1B35B4050067A460 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F5FD2E4B1B36274F00E71C40 /* Canvas.m */,
+				F5FD2E4C1B36274F00E71C40 /* Canvas.h */,
 				F5FD2E401B35F3A000E71C40 /* BreakView.h */,
 				F5FD2E411B35F3A000E71C40 /* BreakView.m */,
 				F5FD2E431B35F4D700E71C40 /* BreakView.xib */,
@@ -389,8 +407,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6399341B3633DD0067A460 /* 0850.mp3 in Resources */,
+				CF6399301B362E510067A460 /* 0899.mp3 in Resources */,
 				1725AFD81B3591940093E139 /* Main.storyboard in Resources */,
 				1725AFDD1B3591940093E139 /* LaunchScreen.xib in Resources */,
+				CF6399321B36317B0067A460 /* 0339.mp3 in Resources */,
 				F5FD2E441B35F4D700E71C40 /* BreakView.xib in Resources */,
 				1725AFDA1B3591940093E139 /* Images.xcassets in Resources */,
 			);
@@ -462,6 +483,7 @@
 				1725B0201B35A6130093E139 /* ChairModel.m in Sources */,
 				1725B0141B359D800093E139 /* JSTGyroscopeSensor.m in Sources */,
 				1725B0171B359D800093E139 /* JSTKeysSensor.m in Sources */,
+				F5FD2E4D1B36274F00E71C40 /* Canvas.m in Sources */,
 				1725AFCF1B3591940093E139 /* main.m in Sources */,
 				17DF90A51B36075000BEF210 /* MicrophoneSensor.m in Sources */,
 				1725B0161B359D800093E139 /* JSTIRSensor.m in Sources */,

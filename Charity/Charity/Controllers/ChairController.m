@@ -8,6 +8,7 @@
 
 #import <KAProgressLabel/KAProgressLabel.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 #import "TimerViewController.h"
 #import "ChairController.h"
 
@@ -25,6 +26,8 @@
 
 @property (nonatomic, strong) NSTimer *sedentaryTimer;
 @property (nonatomic, strong) NSTimer *slouchingTimer;
+
+@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end
 
@@ -65,6 +68,7 @@
          [self.timerViewController start];
     } else {
         [self.timerViewController stop];
+        [self.player stop];
     }
 
     if (self.slouched) {
@@ -80,6 +84,82 @@
     [self sedentaryTimerStart:sat];
 }
 
+-(void) playSound {
+
+    UInt32 doChangeDefaultRoute = 1;
+    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
+
+
+    NSString *path;
+
+    NSURL *url;
+
+
+    path = [[NSBundle mainBundle] pathForResource:@"0899" ofType:@"mp3"];
+
+    url = [NSURL fileURLWithPath:path];
+
+
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+
+
+    [self.player setVolume:1.0];
+    [self.player play];
+
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+-(void) playSoundCoin {
+
+    UInt32 doChangeDefaultRoute = 1;
+    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
+
+    NSString *path;
+
+    NSURL *url;
+
+
+    path = [[NSBundle mainBundle] pathForResource:@"0339" ofType:@"mp3"];
+
+    url = [NSURL fileURLWithPath:path];
+
+
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+
+
+    [self.player setVolume:1.0];
+    [self.player play];
+
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
+-(void) playSoundCar {
+
+    UInt32 doChangeDefaultRoute = 1;
+    AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker, sizeof(doChangeDefaultRoute), &doChangeDefaultRoute);
+
+    NSString *path;
+
+    NSURL *url;
+
+
+    path = [[NSBundle mainBundle] pathForResource:@"0850" ofType:@"mp3"];
+
+    url = [NSURL fileURLWithPath:path];
+
+
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+
+
+    [self.player setVolume:1.0];
+    [self.player play];
+
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
 - (void)setSlouched:(BOOL)slouched {
 
     if (_slouched == slouched) {
@@ -88,7 +168,12 @@
 
     _slouched = slouched;
 
+    if (!slouched) {
+        [self.player stop];
+    }
+
     self.silhuetteImageView.image = [self imageForSat:self.sat slouched:slouched];
+
     if (self.sat) {
         [self slouchTimerStart:slouched];
     }
@@ -128,8 +213,8 @@
                                                              selector:@selector(slouchTick:)
                                                              userInfo:nil
                                                               repeats:YES];
-        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
+        [self playSoundCar];
 
         return;
     }
@@ -155,6 +240,7 @@
         [self sedentaryTimerStart:NO];
         _sedentaryTime = 0.0;
         [self.delegate sedentaryTimeExceeded];
+        [self playSound];
     }
 }
 
@@ -172,6 +258,7 @@
         [self slouchTimerStart:NO];
         _slouchTime = 0.0;
         [self.delegate slouchingTimeExceeded];
+        [self playSoundCoin];
     }
 }
 
