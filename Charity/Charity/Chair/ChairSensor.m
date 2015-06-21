@@ -75,7 +75,7 @@ const NSUInteger JSTValuesRangeDifferentialThreshold  = 1;
         NSLog(@"who: %@,last_avg: %@, avg: %@", self, self.lastAverage, average);
         [self.values removeAllObjects];
         if (self.lastAverage) {
-            if ( fabsf (average.floatValue ) > 24.f ) {
+            if ( fabsf (average.floatValue ) > 22.f ) {
               
                     if (!self.isTouching) {
                         self.isTouching = YES;
