@@ -36,6 +36,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *lightLevelLabel;
 @property (nonatomic, weak) IBOutlet UILabel *temperatureLabel;
 @property(nonatomic, strong) MicrophoneSensor *microphone;
+@property (nonatomic, strong)Canvas*canvas;
 @property (nonatomic, strong) CameraLightSensor *camera;
 
 @end
@@ -65,6 +66,7 @@
   self.chairModel = [ChairModel new];
   self.chairModel.delegate = self.chairController;
   self.chairModel.connectionDelegate = self;
+
     
     self.camera = [CameraLightSensor new];
 }
