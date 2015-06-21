@@ -67,9 +67,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-xS-xbw">
-                                        <rect key="frame" x="0.0" y="16" width="600" height="34"/>
+                                        <rect key="frame" x="0.0" y="21" width="600" height="29"/>
                                         <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <connections>
@@ -80,23 +80,44 @@
                                         <rect key="frame" x="8" y="0.0" width="59" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="59" id="f9k-IY-TdC"/>
+                                            <constraint firstAttribute="height" constant="50" id="joG-FJ-h3i"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="24"/>
                                         </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="CZt-py-jbo">
+                                        <rect key="frame" x="525" y="23" width="67" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="4Fv-ik-S43"/>
+                                            <constraint firstAttribute="width" constant="67" id="Ewc-I6-Hvw"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="MoR-ax-Qts" secondAttribute="bottom" id="0vP-Jq-uqM"/>
                                     <constraint firstItem="MoR-ax-Qts" firstAttribute="top" secondItem="cjS-du-wmA" secondAttribute="top" id="3oQ-dX-sfm"/>
+                                    <constraint firstAttribute="trailing" secondItem="CZt-py-jbo" secondAttribute="trailing" constant="8" id="6jq-n9-YDJ"/>
                                     <constraint firstItem="kt0-xS-xbw" firstAttribute="leading" secondItem="cjS-du-wmA" secondAttribute="leading" id="Ggz-1A-bMy"/>
+                                    <constraint firstAttribute="bottom" secondItem="CZt-py-jbo" secondAttribute="bottom" constant="13" id="H7x-51-igq"/>
+                                    <constraint firstItem="CZt-py-jbo" firstAttribute="centerY" secondItem="kt0-xS-xbw" secondAttribute="centerY" id="LfQ-DI-N66"/>
                                     <constraint firstAttribute="bottom" secondItem="kt0-xS-xbw" secondAttribute="bottom" id="QTN-Jr-YVh"/>
                                     <constraint firstItem="kt0-xS-xbw" firstAttribute="top" secondItem="cjS-du-wmA" secondAttribute="top" constant="16" id="Ro2-0H-9Ip"/>
+                                    <constraint firstItem="CZt-py-jbo" firstAttribute="leading" secondItem="MoR-ax-Qts" secondAttribute="trailing" constant="8" symbolic="YES" id="gGt-AP-j4k"/>
                                     <constraint firstAttribute="height" constant="50" id="l3Y-dy-lJR"/>
                                     <constraint firstItem="MoR-ax-Qts" firstAttribute="leading" secondItem="cjS-du-wmA" secondAttribute="leading" constant="8" id="mBE-AH-WKQ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CZt-py-jbo" secondAttribute="trailing" constant="20" symbolic="YES" id="oqJ-oP-ZVi"/>
                                     <constraint firstAttribute="trailing" secondItem="kt0-xS-xbw" secondAttribute="trailing" id="vOj-W2-Exb"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ro2-0H-9Ip"/>
+                                        <exclude reference="H7x-51-igq"/>
+                                        <exclude reference="gGt-AP-j4k"/>
+                                        <exclude reference="oqJ-oP-ZVi"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwT-f8-nos">
                                 <rect key="frame" x="0.0" y="305" width="300" height="100"/>
@@ -368,5 +389,6 @@
     <resources>
         <image name="Michal" width="303" height="370"/>
         <image name="silhuette" width="115" height="196"/>
+        <image name="test" width="600" height="146"/>
     </resources>
 </document>
